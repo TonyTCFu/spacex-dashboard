@@ -1,0 +1,46 @@
+name: Update SPCX quote
+
+# Pulls the delayed SPCX.US quote from stooq every 15 minutes during
+# NYSE trading hours and commits it as quote.json, so the static page
+# can serve fresh quotes same-origin (no client-side cross-border fetch).
+on:
+  schedule:
+    # 13:30-20:00 UTC == 09:30-16:00 ET (EDT), Mon-Fri
+    - cron: '*/15 13-20 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  quote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch quote from stooq
+        run: |
+          set -euo pipefail
+          row=$(curl -sL --max-time 25 "https://stooq.com/q/l/?s=spcx.us&f=sd2t2ohlcv&h&e=csv" | tail -n 1)
+          echo "raw: $row"
+          close=$(echo "$row" | cut -d, -f7)
+          open=$(echo "$row" | cut -d, -f4)
+          qdate=$(echo "$row" | cut -d, -f2)
+          qtime=$(echo "$row" | cut -d, -f3)
+          if ! [[ "$close" =~ ^[0-9]+(\.[0-9]+)?$ ]] || ! [[ "$open" =~ ^[0-9]+(\.[0-9]+)?$ ]]; then
+            echo "Invalid quote, keeping previous snapshot."
+            exit 0
+          fi
+          chg=$(awk -v c="$close" -v o="$open" 'BEGIN{printf "%.2f",(c-o)/o*100}')
+          printf '{"symbol":"SPCX.US","price":%s,"open":%s,"changePct":%s,"date":"%s","time":"%s","source":"stooq","delayMin":15}\n' \
+            "$close" "$open" "$chg" "$qdate" "$qtime" > quote.json
+          cat quote.json
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add quote.json
+          if git diff --cached --quiet; then
+            echo "Quote unchanged, nothing to commit."
+          else
+            git commit -m "Update SPCX quote snapshot"
+            git push
+          fi
