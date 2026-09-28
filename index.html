@@ -21,40 +21,40 @@
   <title>SpaceX</title>
   <style>
     :root {
-      color-scheme: light dark;
-      --bg: #eef1f4;
-      --surface: #ffffff;
-      --surface-2: #e4e9ee;
-      --ink: #10151b;
-      --muted: #596675;
-      --line: #c6d0d8;
-      --line-strong: #9ba9b6;
-      --accent: #bb1e2f;
-      --accent-2: #0b716a;
-      --positive: #0b725a;
-      --warning: #985d0a;
-      --danger: #b52435;
-      --chart: #c92235;
-      --chart-fill: rgba(201,34,53,.10);
-      --shadow: 0 16px 38px rgba(24,34,44,.09);
+      color-scheme: dark;
+      --bg: #070a0e;
+      --surface: #0d1218;
+      --surface-2: #141b23;
+      --ink: #edf2f7;
+      --muted: #9ba9b6;
+      --line: #27313b;
+      --line-strong: #45515e;
+      --accent: #ff5366;
+      --accent-2: #46b8ad;
+      --positive: #47c6a1;
+      --warning: #e3a84d;
+      --danger: #ff6678;
+      --chart: #ff5669;
+      --chart-fill: rgba(255,86,105,.12);
+      --shadow: 0 18px 50px rgba(0,0,0,.38);
     }
-    @media (prefers-color-scheme: dark) {
+    @media (prefers-color-scheme: light) {
       :root {
-        --bg: #070a0e;
-        --surface: #0d1218;
-        --surface-2: #141b23;
-        --ink: #edf2f7;
-        --muted: #9ba9b6;
-        --line: #27313b;
-        --line-strong: #45515e;
-        --accent: #ff5366;
-        --accent-2: #46b8ad;
-        --positive: #47c6a1;
-        --warning: #e3a84d;
-        --danger: #ff6678;
-        --chart: #ff5669;
-        --chart-fill: rgba(255,86,105,.12);
-        --shadow: 0 18px 50px rgba(0,0,0,.38);
+        --bg: #0a0f15;
+        --surface: #111923;
+        --surface-2: #182330;
+        --ink: #f3f6f9;
+        --muted: #aab6c2;
+        --line: #2c3946;
+        --line-strong: #516170;
+        --accent: #ff6678;
+        --accent-2: #59c9bd;
+        --positive: #55d1ac;
+        --warning: #edb55d;
+        --danger: #ff7182;
+        --chart: #ff6678;
+        --chart-fill: rgba(255,102,120,.13);
+        --shadow: 0 18px 50px rgba(0,0,0,.34);
       }
     }
     * { box-sizing: border-box; }
@@ -209,28 +209,28 @@
       <div>
         <div class="ticker">NASDAQ · SPCX / RESEARCH SNAPSHOT</div>
         <h1>公开市场后的 SpaceX</h1>
-        <p class="mast-note">价格、运营、财务、空头、估值与产业影响的研究看板。股价可获取约 15 分钟延迟报价；其余“当前”数据均锁定在下方标注日期。</p>
+        <p class="mast-note">价格、运营、财务、空头、估值与产业影响的研究看板。收盘数据锁定至 2026-09-28（美东）；盘中可手动刷新行情，其余数字均按旁注日期呈现。</p>
       </div>
-      <div class="asof"><strong>数据快照 · 2026-09-27</strong>上海时间 23:44 · USD</div>
+      <div class="asof"><strong>数据快照 · 2026-09-28</strong>美股收盘 · ET · USD</div>
     </header>
 
     <div class="snapshot-warning"><strong>先看数据边界：</strong>行情来自已验证的数据 feed；多数财务与 S-1 数字来自媒体对申报文件的报道，本次研究未直接核验 SEC 原始文件。分析师目标与技术位属于第三方观点，不等于事实或投资建议。</div>
 
     <nav class="section-nav" aria-label="页面章节">
-      <a href="#market">行情</a><a href="#operations">运营</a><a href="#financials">财务</a><a href="#short">做空</a><a href="#valuation">估值</a><a href="#thesis">为什么投资</a><a href="#risks">风险</a><a href="#events">催化剂</a>
+      <a href="#market">行情</a><a href="#operations">运营</a><a href="#financials">财务</a><a href="#short">做空</a><a href="#valuation">估值</a><a href="#thesis">为什么投资</a><a href="#risks">风险</a><a href="#events">动态</a>
     </nav>
 
     <section class="metrics" aria-label="关键数字">
       <article class="metric primary">
-        <span class="metric-label" id="quoteLabel">最近收盘 · 2026-09-25</span>
-        <span class="metric-value" id="quotePrice">$148.68 <small class="pos" style="font-size:.45em">+0.44%</small></span>
-        <div class="metric-sub" id="quoteNote">该交易日 $146.00–149.67 · 9/27 获取 · <a class="cite" href="https://finnhub.io/?q=%22SPCX%22" target="_blank" rel="noreferrer">FINNHUB ↗</a></div>
+        <span class="metric-label" id="quoteLabel">收盘价 · 2026-09-28</span>
+        <span class="metric-value" id="quotePrice">$145.47 <small class="neg" style="font-size:.45em">−2.16%</small></span>
+        <div class="metric-sub" id="quoteNote">较前收盘 $148.68 下跌 $3.21 · 截至 2026-09-28 收盘 · Finnhub / ChartExchange / wallstreetnumbers / marketbeat</div>
         <button type="button" class="quote-refresh" id="quoteRefresh">↻ 刷新实时行情</button>
       </article>
       <article class="metric">
-        <span class="metric-label">市值 · 2026-09-25</span>
-        <span class="metric-value">$2.02T</span>
-        <div class="metric-sub">企业价值约 $1.96T · <a class="cite" href="https://StockAnalysis.com/stocks/spcx/statistics/" target="_blank" rel="noreferrer">SOURCE ↗</a></div>
+        <span class="metric-label">市值 · 2026-09-28</span>
+        <span class="metric-value">≈$2.0T</span>
+        <div class="metric-sub">截至 2026-09-28 收盘 · 多源一致</div>
       </article>
       <article class="metric">
         <span class="metric-label">空头仓位 · 2026-09-15</span>
@@ -248,21 +248,25 @@
       <div class="section-head"><h2>股价表现</h2><span class="section-index">01 / MARKET</span></div>
       <div class="panel chart-panel">
         <div class="chart-toolbar">
-          <h3>自 IPO 收盘价 · USD</h3>
+          <h3>SpaceX 可比区间收盘价 · USD</h3>
           <div class="range-switch" aria-label="图表区间">
             <button type="button" data-range="all" aria-pressed="true">上市以来</button>
             <button type="button" data-range="1m" aria-pressed="false">近 1 个月</button>
           </div>
         </div>
-        <div class="chart-wrap"><svg id="priceChart" viewBox="0 0 960 330" role="img" aria-label="SPCX 自 2026 年 6 月 12 日上市以来的每日收盘价折线图"></svg></div>
+        <div class="chart-wrap"><svg id="priceChart" viewBox="0 0 960 330" role="img" aria-label="SPCX 自 2026 年 6 月 15 日可比区间至 2026 年 9 月 28 日的每日收盘价折线图"></svg></div>
         <div class="chart-readout" id="chartReadout">移动指针查看日期与收盘价</div>
-        <div class="chart-note">纵轴按可见数据范围缩放，非零基线；日期按真实时间间隔绘制。数据截至 2026-09-25。<a class="cite" href="https://finnhub.io/?q=%22SPCX%22" target="_blank" rel="noreferrer">SOURCE ↗</a></div>
+        <div class="chart-note">纵轴按可见数据范围缩放，非零基线；日期按真实时间间隔绘制。数据截至 2026-09-28。<a class="cite" href="https://finnhub.io/?q=%22SPCX%22" target="_blank" rel="noreferrer">SOURCE ↗</a></div>
       </div>
       <div class="data-grid" style="margin-top:12px">
-        <div class="datum"><span class="k">52 周高 / 低</span><span class="v">$225.64 / $104.83</span><span class="k">截至 2026-09-27 · <a class="cite" href="https://finnhub.io/?q=%22SPCX%22" target="_blank" rel="noreferrer">源</a></span></div>
-        <div class="datum"><span class="k">1 周回报</span><span class="v neg">−2.64%</span><span class="k">至 2026-09-25 · <a class="cite" href="https://finnhub.io/?q=%22SPCX%22" target="_blank" rel="noreferrer">源</a></span></div>
-        <div class="datum"><span class="k">1 个月回报</span><span class="v pos">+6.48%</span><span class="k">研究序列口径 · <a class="cite" href="https://finnhub.io/?q=%22SPCX%22" target="_blank" rel="noreferrer">源</a></span></div>
-        <div class="datum"><span class="k">Beta</span><span class="v">5.36</span><span class="k">截至 2026-09-27 · <a class="cite" href="https://finnhub.io/?q=%22SPCX%22" target="_blank" rel="noreferrer">源</a></span></div>
+        <div class="datum"><span class="k">开盘 / 最高 / 最低</span><span class="v">$148.49 / $150.80 / $145.36</span><span class="k">截至 2026-09-28 收盘 · 多源一致</span></div>
+        <div class="datum"><span class="k">盘后交易</span><span class="v pos">≈$145.71 · +0.15%</span><span class="k">截至 2026-09-28 盘后 · 多源一致</span></div>
+        <div class="datum"><span class="k">成交量 / 日均</span><span class="v">≈81.6M / ≈103M</span><span class="k">截至 2026-09-28 收盘 · 多源一致</span></div>
+        <div class="datum"><span class="k">52 周高 / 低</span><span class="v">$225.64 / $104.83</span><span class="k">高点 2026-06-15 · 低点 2026-08-02</span></div>
+        <div class="datum"><span class="k">近 5 日回报</span><span class="v neg">−4.74%</span><span class="k">截至 2026-09-28 · Finnhub</span></div>
+        <div class="datum"><span class="k">近 1 个月回报</span><span class="v pos">+2.81%</span><span class="k">截至 2026-09-28 · Finnhub</span></div>
+        <div class="datum"><span class="k">IPO 发行价</span><span class="v">$135</span><span class="k">2026-06 上市</span></div>
+        <div class="datum"><span class="k">历史口径</span><span class="v"><span class="tag unavailable">不可比</span></span><span class="k">2026-06-15 前 SPCX 曾属另一 ETF</span></div>
       </div>
     </section>
 
@@ -311,13 +315,14 @@
     <section class="section" id="short">
       <div class="section-head"><h2>做空与借券</h2><span class="section-index">04 / SHORT</span></div>
       <div class="data-grid">
-        <div class="datum"><span class="k">Short interest</span><span class="v">162.25M 股</span><span class="k">结算日 2026-09-15 · <a class="cite" href="https://www.finra.org/finra-data/browse-catalog/equity-short-interest/data" target="_blank" rel="noreferrer">FINRA ↗</a></span></div>
-        <div class="datum"><span class="k">空头变化（半月）</span><span class="v pos">−6.55%</span><span class="k">173.62M → 162.25M · FINRA 2026-08-31→09-15</span></div>
-        <div class="datum"><span class="k">Short % of float</span><span class="v">7.26%</span><span class="k">流通盘 2.24B 口径 · <a class="cite" href="https://StockAnalysis.com/stocks/spcx/statistics/" target="_blank" rel="noreferrer">源</a></span></div>
-        <div class="datum"><span class="k">Days to cover</span><span class="v">2.0 / 2.07</span><span class="k">2026-09-15 · 双源口径</span></div>
-        <div class="datum"><span class="k">借券难度（估算）</span><span class="v"><span class="tag">易借</span></span><span class="k">启发式分级，非实测费率</span></div>
+        <div class="datum"><span class="k">Short interest</span><span class="v">162,252,035 股</span><span class="k">结算日 2026-09-15 · <a class="cite" href="https://www.finra.org/finra-data/browse-catalog/equity-short-interest/data" target="_blank" rel="noreferrer">FINRA ↗</a></span></div>
+        <div class="datum"><span class="k">空头变化（半月）</span><span class="v pos">−6.55%</span><span class="k">173,619,060 → 162,252,035 股 · FINRA 2026-08-31→09-15</span></div>
+        <div class="datum"><span class="k">Short % of float</span><span class="v">7.26%</span><span class="k">流通盘 2.24B 口径 · 截至 2026-09-15</span></div>
+        <div class="datum"><span class="k">Days to cover</span><span class="v">≈2.0 天</span><span class="k">截至 2026-09-15 · FINRA 结算</span></div>
+        <div class="datum"><span class="k">借券费率</span><span class="v">0.41% / 年</span><span class="k">截至 2026-09-28 · finshort 引 IBKR · 第三方参考</span></div>
+        <div class="datum"><span class="k">借券难度（估算）</span><span class="v"><span class="tag">易借</span></span><span class="k">截至 2026-09-28 · 启发式分级，非实时券商报价</span></div>
       </div>
-      <div class="source-note" style="margin-top:12px"><strong>口径警示：</strong>空头占总股本约 1.2%，按可交易流通盘则为 7.26%。随着锁定期股份解禁，流通盘从 7 月约 646M 扩至 9 月约 2.24B，不可把不同日期、不同数据商的 short-float 百分比直接比较。真实 utilization 与实时借券费率只在付费证券借贷数据库（S3 Partners / ORTEX 等）中提供，无免费公开源。本页“易借”是启发式估算：空头占流通盘 7.26%（偏低）、days to cover 约 2 天（回补压力小）、$2T 级大盘股流动性充足；按行业常用年化分级（&lt;1% 一般抵押品、1–5% 易借、5–15% 难借、15–30% 很难、&gt;30% 极端）判断为易借。它不是实测费率，实际做空成本以券商实时 locate 报价为准。<a class="cite" href="https://github.com/yennanliu/investskill/blob/HEAD/prompts/short-interest.md" target="_blank" rel="noreferrer">分级参考 ↗</a> 另注：2026-06-15 之前，SPCX 对应“The SPAC and New Issue ETF”，更早 FINRA 空头历史不可比。</div>
+      <div class="source-note" style="margin-top:12px"><strong>口径警示：</strong>截至 2026-09-15，空头占总股本约 1.2%，按可交易流通盘则为 7.26%；流通盘从 2026 年 7 月约 646M 扩至 9 月约 2.24B，不可把不同日期、不同数据商的 short-float 百分比直接比较。0.41% 年化借券费率为 finshort 引用 IBKR 的 2026-09-28 第三方快照，仅供参考；实时 utilization 与实时费率无免费公开源。本页“易借”为截至 2026-09-28 的启发式估算：空头占流通盘 7.26%（2026-09-15，偏低）、days to cover 约 2 天（2026-09-15，回补压力小）、市值约 $2.0T（2026-09-28，大盘股流动性）；实际做空成本以券商实时 locate 报价为准。另注：2026-06-15 之前，SPCX 对应“The SPAC and New Issue ETF”，更早 FINRA 空头历史不可比。</div>
     </section>
 
     <section class="section" id="valuation">
@@ -329,11 +334,11 @@
         <div class="datum"><span class="k">P/B</span><span class="v">15.40×</span><span class="k">2026-09-25 · <a class="cite" href="https://StockAnalysis.com/stocks/spcx/statistics/" target="_blank" rel="noreferrer">源</a></span></div>
       </div>
       <div class="zones">
-        <article class="zone"><span class="tag">观察 / 支撑</span><span class="price">$133–$140</span><p>来自已发布技术位：Fib $133.36、$138–$140 支撑带、50 日均线约 $135.6–$135.9，以及 $135 IPO 价。<a class="cite" href="https://www.coingabbar.com/en/price-prediction/spacex-stock-spcx-price-prediction-2026-2027-2028-2029-2030" target="_blank" rel="noreferrer">源</a></p></article>
-        <article class="zone"><span class="tag">短线枢轴</span><span class="price">$150–$154</span><p>$150 附近为多空转换；已发布观点把 $153.50 视为突破位、$143.50 视为转弱位。<a class="cite" href="https://www.fxleaders.com/news/2026/09/17/spacex-stock-forecast-spcx-160-breakout/" target="_blank" rel="noreferrer">源</a></p></article>
-        <article class="zone"><span class="tag">减持 / 止盈参考</span><span class="price">$160–$172 → $218–$248</span><p>前段为已发布阻力带，后段为分析师聚合均值及 Bernstein 目标附近。Morgan Stanley 目标价 $300。<a class="cite" href="https://www.edgen.tech/news/post/morgan-stanley-keeps-spacex-at-300-as-ai-business-trades-at-90-discount" target="_blank" rel="noreferrer">源</a></p></article>
+        <article class="zone"><span class="tag">观察 / 支撑 · 截至 2026-09-27</span><span class="price">$133–$140</span><p>截至 2026-09-27 的已发布技术位：Fib $133.36、$138–$140 支撑带、50 日均线约 $135.6–$135.9，以及 2026-06 的 $135 IPO 价。<a class="cite" href="https://www.coingabbar.com/en/price-prediction/spacex-stock-spcx-price-prediction-2026-2027-2028-2029-2030" target="_blank" rel="noreferrer">源</a></p></article>
+        <article class="zone"><span class="tag">短线枢轴 · 2026-09-17</span><span class="price">$150–$154</span><p>截至 2026-09-17 的已发布观点：$150 附近为多空转换，$153.50 为突破位、$143.50 为转弱位。<a class="cite" href="https://www.fxleaders.com/news/2026/09/17/spacex-stock-forecast-spcx-160-breakout/" target="_blank" rel="noreferrer">源</a></p></article>
+        <article class="zone"><span class="tag">减持 / 止盈参考 · 截至 2026-09-27</span><span class="price">$160–$172 → $218–$248</span><p>截至 2026-09-27，前段为已发布阻力带，后段为分析师聚合均值及 Bernstein 目标附近；Morgan Stanley 目标价 $300。<a class="cite" href="https://www.edgen.tech/news/post/morgan-stanley-keeps-spacex-at-300-as-ai-business-trades-at-90-discount" target="_blank" rel="noreferrer">源</a></p></article>
       </div>
-      <div class="snapshot-warning"><strong>非投资建议：</strong>以上“观察 / 减持”区间是对第三方技术位与分析师目标价的研究整理，不是个性化交易指令。分析师聚合区间跨度可达 $75–$450，显示模型分歧很大。<a class="cite" href="https://stockanalysis.com/stocks/spcx/forecast/" target="_blank" rel="noreferrer">SOURCE ↗</a></div>
+      <div class="snapshot-warning"><strong>非投资建议：</strong>以上“观察 / 减持”区间是对第三方技术位与分析师目标价的研究整理，不是个性化交易指令。截至 2026-09-27，分析师聚合区间跨度可达 $75–$450，显示模型分歧很大。<a class="cite" href="https://stockanalysis.com/stocks/spcx/forecast/" target="_blank" rel="noreferrer">SOURCE ↗</a></div>
     </section>
 
     <section class="section" id="thesis">
@@ -342,7 +347,7 @@
         <article class="card">
           <ul class="thesis-list">
             <li><span class="num">01</span><div><strong>Starlink 已形成规模与利润支点</strong><p>Q2 订户 12M、连接业务营收 $4.291B、季度经营利润约 $1.66B；它为高投入业务提供现金基础。<a class="cite" href="https://www.financial-news.co.uk/spacex-q2-2026-results-beat-estimates-as-ai-capex-clouds-outlook/" target="_blank" rel="noreferrer">源</a></p></div></li>
-            <li><span class="num">02</span><div><strong>发射市场的结构性领先</strong><p>商业发射市场份额约 80%，发射频率超过每周两次；规模、复用与垂直整合形成进入壁垒。<a class="cite" href="https://www.financial-news.co.uk/spacex-stock-valuation-under-scrutiny-after-debut-earnings-miss-profit-bar/" target="_blank" rel="noreferrer">源</a></p></div></li>
+            <li><span class="num">02</span><div><strong>发射市场的结构性领先</strong><p>截至 2026 Q2，商业发射市场份额约 80%，发射频率超过每周两次；规模、复用与垂直整合形成进入壁垒。<a class="cite" href="https://www.financial-news.co.uk/spacex-stock-valuation-under-scrutiny-after-debut-earnings-miss-profit-bar/" target="_blank" rel="noreferrer">源</a></p></div></li>
             <li><span class="num">03</span><div><strong>Starship 打开多个相邻市场</strong><p>V3 星链、卫星直连手机与轨道 AI 算力都依赖 Starship；成功规模化将同时放大多个业务。<a class="cite" href="https://microventures.com/dissecting-spacex-s-1" target="_blank" rel="noreferrer">源</a></p></div></li>
             <li><span class="num">04</span><div><strong>政府与国防合同提供长期需求</strong><p>Q2 新增 Starshield 多年期合同超过 $6B；NASA 载人计划合同总值约 $5.92B 至 2030 年。<a class="cite" href="https://www.ad-hoc-news.de/boerse/corporate-news/spacex-stock-gains-on-strong-revenue-and-nasa-work/70130319" target="_blank" rel="noreferrer">源</a></p></div></li>
             <li><span class="num">05</span><div><strong>AI 业务提供高弹性，可也放大风险</strong><p>Q2 AI 营收 $2.561B、同比 +247%；但季度经营亏损 $1.26B，因此这是高弹性而非已证实的利润引擎。<a class="cite" href="https://thegridfin.com/spacex-q2-2026-earnings/" target="_blank" rel="noreferrer">源</a></p></div></li>
@@ -350,7 +355,7 @@
         </article>
         <article class="card">
           <h3>产业影响</h3>
-          <p><strong style="color:var(--ink)">卫星互联网：</strong>Starlink 以约 9,600–11,000+ 颗卫星服务 167 个市场，迫使 Kuiper、OneWeb/Eutelsat 及中国星座加速部署与频谱争夺。<a class="cite" href="https://www.linkedin.com/pulse/11000-satellites-12-million-users-20b-revenue-what-starlinks-yang-jofac" target="_blank" rel="noreferrer">源</a></p>
+          <p><strong style="color:var(--ink)">卫星互联网：</strong>截至 2026 Q2，Starlink 以约 9,600–11,000+ 颗卫星服务 167 个市场，迫使 Kuiper、OneWeb/Eutelsat 及中国星座加速部署与频谱争夺。<a class="cite" href="https://www.linkedin.com/pulse/11000-satellites-12-million-users-20b-revenue-what-starlinks-yang-jofac" target="_blank" rel="noreferrer">源</a></p>
           <p><strong style="color:var(--ink)">美国政府基础设施：</strong>约 20% 的 2025 营收来自美国联邦机构，SpaceX 已成为国家安全与商业载人发射的核心供应商。<a class="cite" href="https://moneywise.com/investing/stocks/spacex-ipo-s1-risk-factors-elon-musk" target="_blank" rel="noreferrer">源</a></p>
           <p><strong style="color:var(--ink)">AI 基础设施：</strong>Colossus 与 Terafab 规划将 SpaceX 推向超大规模算力与半导体基础设施竞争，但资本开支可见度与回报周期仍不清晰。<a class="cite" href="https://www.nextbigfuture.com/2026/07/spacex-fourth-quarter-2026-could-show-cashflow-positive.html" target="_blank" rel="noreferrer">源</a></p>
         </article>
@@ -364,7 +369,7 @@
           <li><span class="num">01</span><div><strong>Starship 执行风险</strong><p>V3 星链、直连手机与轨道算力均依赖完全可复用与规模化；任何延误都会同时压低多个业务预期。<a class="cite" href="https://microventures.com/dissecting-spacex-s-1" target="_blank" rel="noreferrer">源</a></p></div></li>
           <li><span class="num">02</span><div><strong>资本强度与自由现金流</strong><p>2025 FCF −$13.8B；Q2 2026 报告口径 FCF −$25B。JPMorgan 预计 2027–2028 每年资本开支可能接近 $200B。<a class="cite" href="https://www.fool.com/investing/2026/09/12/3-reasons-spacex-stock-could-crash-in-q4-and-1-rea/" target="_blank" rel="noreferrer">源</a></p></div></li>
           <li><span class="num">03</span><div><strong>没有 GAAP 盈利记录</strong><p>2025 净亏损约 $4.9B、累计亏损 $41.3B；高估值依赖远期兑现而非当前利润。<a class="cite" href="https://moneywise.com/investing/stocks/spacex-ipo-s1-risk-factors-elon-musk" target="_blank" rel="noreferrer">源</a></p></div></li>
-          <li><span class="num">04</span><div><strong>治理与关键人物集中</strong><p>Musk 经 Class B 超级投票权控制超过 82% 表决权；公众股东影响有限，S-1 也明确列示关键人物依赖。<a class="cite" href="https://www.reuters.com/legal/legalindustry/musk-discloses-484-stake-spacex-regulatory-filing-2026-08-13/" target="_blank" rel="noreferrer">源</a></p></div></li>
+          <li><span class="num">04</span><div><strong>治理与关键人物集中</strong><p>截至 2026-08-13 披露，Musk 经 Class B 超级投票权控制超过 82% 表决权；公众股东影响有限，S-1 也明确列示关键人物依赖。<a class="cite" href="https://www.reuters.com/legal/legalindustry/musk-discloses-484-stake-spacex-regulatory-filing-2026-08-13/" target="_blank" rel="noreferrer">源</a></p></div></li>
           <li><span class="num">05</span><div><strong>监管、频谱与出口管制</strong><p>FAA 发射许可、FCC 与各国频谱、出口控制和环境诉讼均可能限制部署节奏。<a class="cite" href="https://microventures.com/dissecting-spacex-s-1" target="_blank" rel="noreferrer">源</a></p></div></li>
           <li><span class="num">06</span><div><strong>股份解禁压力</strong><p>2026–2027 仍有数十亿股分期解禁，Musk 约 6.4B 股锁定期至 2027-06-12；9 月解禁已伴随股价压力。<a class="cite" href="https://www.fool.com/investing/2026/09/23/spacex-can-t-join-the-s-and-p-500-before-june-2027-and-its-losses-could-keep-it-out-longer/" target="_blank" rel="noreferrer">源</a></p></div></li>
           <li><span class="num">07</span><div><strong>AI 整合与模型风险</strong><p>xAI 整合尚未完成，模型幻觉、训练数据污染、版权诉讼与 Terafab 非约束性安排增加执行不确定性。<a class="cite" href="https://moneywise.com/investing/stocks/spacex-ipo-s1-risk-factors-elon-musk" target="_blank" rel="noreferrer">源</a></p></div></li>
@@ -374,23 +379,23 @@
     </section>
 
     <section class="section" id="events">
-      <div class="section-head"><h2>催化剂与关键日期</h2><span class="section-index">08 / CATALYSTS</span></div>
+      <div class="section-head"><h2>公司动态</h2><span class="section-index">08 / NEWS</span></div>
       <div class="panel" style="padding:0 18px">
-        <article class="event"><div class="event-date">2026-09-28<br><span class="tag">未确认窗口</span></div><div><h3>Starship Flight 14 · NET</h3><p>计划首次轨道试飞并部署 26 颗 V3 星链卫星。日期为“最早不早于”，存在变更风险。<a class="cite" href="https://tickeron.com/ticker/SPCX/" target="_blank" rel="noreferrer">SOURCE ↗</a></p></div></article>
-        <article class="event"><div class="event-date">2026-10-09<br>2026-10-24</div><div><h3>后续锁定期股份释放</h3><p>媒体报道各约 328M 股；实际出售量未知。<a class="cite" href="https://www.coingabbar.com/en/price-prediction/spacex-stock-price-prediction-2026-spcx-lockup-schedule-key-levels" target="_blank" rel="noreferrer">SOURCE ↗</a></p></div></article>
-        <article class="event"><div class="event-date">约 2026-11-05<br><span class="tag">公司未确认</span></div><div><h3>Q3 2026 财报</h3><p>第三方日历存在 11 月 3 日与 5 日两种说法；公司尚未确认。<a class="cite" href="https://www.vantagemarkets.com/market-analysis/spacex-stock-price-analysis-monthly-outlook/" target="_blank" rel="noreferrer">SOURCE ↗</a></p></div></article>
-        <article class="event"><div class="event-date">2027-06-12</div><div><h3>Musk 锁定期到期 / S&P 500 最早季候性门槛</h3><p>约 6.4B 股锁定期到期；同时达到上市 12 个月的最早门槛，但 GAAP 盈利测试仍可能阻止纳入。<a class="cite" href="https://www.fool.com/investing/2026/09/23/spacex-can-t-join-the-s-and-p-500-before-june-2027-and-its-losses-could-keep-it-out-longer/" target="_blank" rel="noreferrer">SOURCE ↗</a></p></div></article>
+        <article class="event"><div class="event-date">2026-09-28<br><span class="tag">FLIGHT 14</span></div><div><h3>Starship 首次进入地球轨道并部署运营载荷</h3><p>Ship 41 上升段的 6 台 Raptor 发动机中损失 1 台，仍完成入轨燃烧并部署 26 颗 Starlink V3 卫星；这是首次搭载运营载荷，CFO Bret Johnsen 称其为首个“创收飞行”。Super Heavy 在墨西哥湾溅落；任务因发动机故障缩短至约 3 小时，飞船随后在太平洋受控溅落。Starship 项目累计投入已超过 $15B（均截至 2026-09-28 新闻披露）。</p></div></article>
+        <article class="event"><div class="event-date">2026-09-28<br><span class="tag">ANALYSTS</span></div><div><h3>多家机构维持买入，算力预期上修</h3><p>Deutsche Bank 维持 Buy、目标价 $235；Mizuho 维持 Buy、目标价 $200；Bernstein 维持 Buy、目标价 $248，并预计 2031 年 Starlink 宽带用户达 168M。Evercore ISI 预计 2026 年底 AI 算力达 2.3–2.7 GW，高于 2.1 GW 共识。30 家机构平均目标价约 $229.50，评级分布为 80% Buy / 17% Hold / 3% Sell（均截至 2026-09-28）。</p></div></article>
+        <article class="event"><div class="event-date">2026-09-28<br><span class="tag">DEEPWATER</span></div><div><h3>Gene Munster：“双倍 + 四倍”利好</h3><p>截至 2026-09-28，Munster 认为 Starship 规模约为 Falcon Heavy 的 2 倍；Starlink V3 速率约为现有服务的 4 倍，平均下载速度由约 150 Mbps 提升至约 600 Mbps，并预计新资费档位即将推出。</p></div></article>
+        <article class="event"><div class="event-date">2026-09-28<br><span class="tag">BERNSTEIN</span></div><div><h3>V3 容量跃升，Falcon 9 逐步退出新业务</h3><p>Bernstein 报告称，单颗 Starlink V3 卫星容量约为 V2 Mini 的 10 倍；截至 2026-09-28，SpaceX 正逐步淘汰 Falcon 9，不再提供新的拼单发射机会，2028 年后或不再提供 Falcon 9 发射服务，现有合同继续执行。</p></div></article>
       </div>
     </section>
 
-    <section class="source-note"><strong>研究完整性：</strong>IPO 融资额存在 $75B 基础发行与约 $85.7B 含超额配售两种口径；Musk 经济权益存在 S-1 约 36% 与 13G 48.4% 两种口径；Q3 财报日期未获公司确认。借券费率与 utilization 无免费公开源，本页仅给出启发式估算。这里保留口径差异，不合并成单一确定值。</section>
+    <section class="source-note"><strong>研究完整性：</strong>截至 2026 年 IPO 披露，融资额存在 $75B 基础发行与约 $85.7B 含超额配售两种口径；截至 2026 年 S-1 / 13G 披露，Musk 经济权益存在约 36% 与 48.4% 两种口径；Q3 2026 财报日期未获公司确认。借券费率 0.41%/年是 finshort 引 IBKR 的 2026-09-28 第三方快照；实时 utilization 与实时费率仍无免费公开源，“易借”仅为启发式估算。这里保留口径差异，不合并成单一确定值。</section>
 
-    <footer>本页是截至 2026-09-27 的静态研究快照；股价可通过页面「刷新实时行情」按钮获取延迟报价（约 15 分钟延迟），其余数据按固定计划更新；不构成证券研究报告或投资建议。引用链接打开第三方原始页面。</footer>
+    <footer>本页是截至 2026-09-28 美股收盘的静态研究快照；股价卡保留「刷新实时行情」按钮及开盘时段自动刷新，其余数据按固定计划更新；不构成证券研究报告或投资建议。引用链接打开第三方原始页面。</footer>
   </main>
 
   <script>
     (function () {
-      var data = [['2026-06-12',160.95],['2026-06-15',192.50],['2026-06-16',201.80],['2026-06-17',191.82],['2026-06-18',185.00],['2026-06-22',154.60],['2026-06-23',156.11],['2026-06-24',154.54],['2026-06-25',153.00],['2026-06-26',153.23],['2026-06-29',164.19],['2026-06-30',170.86],['2026-07-01',157.54],['2026-07-02',162.00],['2026-07-06',160.42],['2026-07-07',149.47],['2026-07-08',148.30],['2026-07-09',152.16],['2026-07-10',145.30],['2026-07-13',139.14],['2026-07-14',136.08],['2026-07-15',135.27],['2026-07-16',131.11],['2026-07-17',123.99],['2026-07-20',119.85],['2026-07-21',123.54],['2026-07-22',115.26],['2026-07-23',118.24],['2026-07-24',115.07],['2026-07-27',113.50],['2026-07-28',116.41],['2026-07-29',112.55],['2026-07-30',112.20],['2026-07-31',108.37],['2026-08-03',114.53],['2026-08-04',125.33],['2026-08-05',108.27],['2026-08-06',114.92],['2026-08-07',133.11],['2026-08-10',138.74],['2026-08-11',133.29],['2026-08-12',146.15],['2026-08-13',141.29],['2026-08-14',140.00],['2026-08-17',146.23],['2026-08-18',143.34],['2026-08-19',139.65],['2026-08-20',134.00],['2026-08-21',136.97],['2026-08-24',135.00],['2026-08-25',137.95],['2026-08-26',139.63],['2026-08-27',140.87],['2026-08-28',141.50],['2026-08-31',143.69],['2026-09-01',142.23],['2026-09-02',140.71],['2026-09-03',149.74],['2026-09-04',147.95],['2026-09-08',153.47],['2026-09-09',147.55],['2026-09-10',148.18],['2026-09-11',151.21],['2026-09-14',148.15],['2026-09-15',143.49],['2026-09-16',150.88],['2026-09-17',154.81],['2026-09-18',152.71],['2026-09-21',151.85],['2026-09-22',154.72],['2026-09-23',148.36],['2026-09-24',148.03],['2026-09-25',148.68]];
+      var data = [['2026-06-15',192.50],['2026-06-16',201.80],['2026-06-17',191.82],['2026-06-18',185.00],['2026-06-22',154.60],['2026-06-23',156.11],['2026-06-24',154.54],['2026-06-25',153.00],['2026-06-26',153.23],['2026-06-29',164.19],['2026-06-30',170.86],['2026-07-01',157.54],['2026-07-02',162.00],['2026-07-06',160.42],['2026-07-07',149.47],['2026-07-08',148.30],['2026-07-09',152.16],['2026-07-10',145.30],['2026-07-13',139.14],['2026-07-14',136.08],['2026-07-15',135.27],['2026-07-16',131.11],['2026-07-17',123.99],['2026-07-20',119.85],['2026-07-21',123.54],['2026-07-22',115.26],['2026-07-23',118.24],['2026-07-24',115.07],['2026-07-27',113.50],['2026-07-28',116.41],['2026-07-29',112.55],['2026-07-30',112.20],['2026-07-31',108.37],['2026-08-03',114.53],['2026-08-04',125.33],['2026-08-05',108.27],['2026-08-06',114.92],['2026-08-07',133.11],['2026-08-10',138.74],['2026-08-11',133.29],['2026-08-12',146.15],['2026-08-13',141.29],['2026-08-14',140.00],['2026-08-17',146.23],['2026-08-18',143.34],['2026-08-19',139.65],['2026-08-20',134.00],['2026-08-21',136.97],['2026-08-24',135.00],['2026-08-25',137.95],['2026-08-26',139.63],['2026-08-27',140.87],['2026-08-28',141.50],['2026-08-31',143.69],['2026-09-01',142.23],['2026-09-02',140.71],['2026-09-03',149.74],['2026-09-04',147.95],['2026-09-08',153.47],['2026-09-09',147.55],['2026-09-10',148.18],['2026-09-11',151.21],['2026-09-14',148.15],['2026-09-15',143.49],['2026-09-16',150.88],['2026-09-17',154.81],['2026-09-18',152.71],['2026-09-21',151.85],['2026-09-22',154.72],['2026-09-23',148.36],['2026-09-24',148.03],['2026-09-25',148.68],['2026-09-28',145.47]];
       var svg = document.getElementById('priceChart');
       var readout = document.getElementById('chartReadout');
       var buttons = document.querySelectorAll('[data-range]');
@@ -443,14 +448,8 @@
   </script>
   <script>
     (function () {
-      var quoteJsonUrl = 'quote.json';
-      var stooqEndpoint = 'https://stooq.com/q/l/?s=spcx.us&f=sd2t2ohlcv&h&e=csv';
-      var sourceUrls = {
-        yahoo: 'https://finance.yahoo.com/quote/SPCX',
-        nasdaq: 'https://www.nasdaq.com/market-activity/stocks/spcx',
-        twelvedata: 'https://twelvedata.com',
-        stooq: 'https://stooq.com/q/?s=spcx.us'
-      };
+      var endpoint = 'https://stooq.com/q/l/?s=spcx.us&f=sd2t2ohlcv&h&e=csv';
+      var sourceUrl = 'https://stooq.com/q/?s=spcx.us';
       var labelNode = document.getElementById('quoteLabel');
       var priceNode = document.getElementById('quotePrice');
       var noteNode = document.getElementById('quoteNote');
@@ -459,91 +458,86 @@
       var fallbackLabel = labelNode.textContent;
       var fallbackPrice = priceNode.innerHTML;
 
-      function sourceLabel(source) {
-        if (source === 'yahoo') return 'Yahoo Finance';
-        if (source === 'nasdaq') return 'Nasdaq';
-        if (source === 'twelvedata') return 'Twelve Data';
-        return 'STOOQ';
-      }
-
-      function setNote(prefix, linkUrl, linkLabel) {
-        noteNode.textContent = prefix + ' \u00b7 ';
+      function setNote(prefix, linkLabel) {
+        noteNode.textContent = prefix + ' · ';
         var link = document.createElement('a');
         link.className = 'cite';
-        link.href = linkUrl;
+        link.href = sourceUrl;
         link.target = '_blank';
         link.rel = 'noreferrer';
         link.textContent = linkLabel;
         noteNode.appendChild(link);
       }
 
-      function renderQuote(price, changePct) {
-        var changeLabel = (changePct >= 0 ? '+' : '\u2212') + Math.abs(changePct).toFixed(2) + '%';
-        var changeNode = document.createElement('small');
-        changeNode.className = changePct >= 0 ? 'pos' : 'neg';
-        changeNode.style.fontSize = '.45em';
-        changeNode.textContent = changeLabel;
-        priceNode.textContent = '$' + price.toFixed(2) + ' ';
-        priceNode.appendChild(changeNode);
-      }
-
       function fetchQuoteJson() {
-        return fetch(quoteJsonUrl + '?_=' + Date.now(), { cache: 'no-store' })
+        return fetch('quote.json?_=' + Date.now(), { cache: 'no-store' })
           .then(function (response) {
-            if (!response.ok) throw new Error('Quote snapshot request failed');
+            if (!response.ok) throw new Error('Quote JSON request failed');
             return response.json();
           })
           .then(function (quote) {
-            var price = Number(quote && quote.price);
-            var changePct = Number(quote && quote.changePct);
-            var date = quote && quote.date;
-            var time = quote && quote.time;
-            if (!Number.isFinite(price) || price <= 0 || !Number.isFinite(changePct) ||
-                !/^\d{4}-\d{2}-\d{2}$/.test(date || '') || !/^\d{2}:\d{2}$/.test(time || '')) {
-              throw new Error('Quote snapshot is invalid');
+            var price = Number(quote.price);
+            var chgPct = Number(quote.changePct);
+            if (!Number.isFinite(price) || price <= 0 || !Number.isFinite(chgPct)) {
+              throw new Error('Quote JSON response is invalid');
             }
-            return { price: price, changePct: changePct, date: date, time: time, source: quote.source || 'stooq' };
+            return { price: price, chgPct: chgPct, stamp: String(quote.date) + ' ' + String(quote.time), source: quote.source || 'stooq' };
           });
       }
 
-      function fetchStooqDirect() {
-        return fetch(stooqEndpoint, { cache: 'no-store' })
+      function fetchDirectStooq() {
+        return fetch(endpoint, { cache: 'no-store' })
           .then(function (response) {
-            if (!response.ok) throw new Error('Quote request failed');
+            if (!response.ok) throw new Error('Direct quote request failed');
             return response.text();
           })
           .then(function (csv) {
             var rows = csv.trim().split(/\r?\n/);
-            if (rows.length < 2) throw new Error('Quote response is empty');
+            if (rows.length < 2) throw new Error('Direct quote response is empty');
             var fields = rows[rows.length - 1].split(',');
             var date = fields[1];
-            var time = (fields[2] || '').slice(0, 5);
+            var time = fields[2];
             var open = Number(fields[3]);
-            var close = Number(fields[6]);
-            if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !/^\d{2}:\d{2}$/.test(time) ||
-                !Number.isFinite(open) || !Number.isFinite(close) || open <= 0) {
-              throw new Error('Quote response is invalid');
+            var price = Number(fields[6]);
+            if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !/^\d{2}:\d{2}:\d{2}$/.test(time) || !Number.isFinite(open) || !Number.isFinite(price) || open <= 0 || price <= 0) {
+              throw new Error('Direct quote response is invalid');
             }
-            return { price: close, changePct: (close - open) / open * 100, date: date, time: time, source: 'stooq' };
+            return { price: price, chgPct: (price - open) / open * 100, stamp: date + ' ' + time, source: 'stooq' };
           });
+      }
+
+      function renderQuote(quote, viaGithub) {
+        var sourceLabel = quote.source === 'nasdaq' ? 'Nasdaq' : (quote.source === 'twelvedata' ? 'Twelve Data' : (quote.source === 'yahoo' ? 'Yahoo Finance' : 'STOOQ'));
+        var changeLabel = (quote.chgPct >= 0 ? '+' : '−') + Math.abs(quote.chgPct).toFixed(2) + '%';
+        var changeNode = document.createElement('small');
+        changeNode.className = quote.chgPct >= 0 ? 'pos' : 'neg';
+        changeNode.style.fontSize = '.45em';
+        changeNode.textContent = changeLabel;
+        priceNode.textContent = '$' + quote.price.toFixed(2) + ' ';
+        priceNode.appendChild(changeNode);
+        labelNode.textContent = '盘中行情 · ' + quote.stamp + ' ET';
+        noteNode.textContent = '更新于 ' + quote.stamp + '（美东）· 数据源 ' + sourceLabel + (viaGithub ? '（GitHub 定时拉取）' : '');
       }
 
       function refreshQuote(silent) {
         if (!silent) {
           button.disabled = true;
-          button.textContent = '\u5237\u65b0\u4e2d\u2026';
+          button.textContent = '刷新中…';
         }
+        var viaGithub = false;
         return fetchQuoteJson()
-          .catch(function () { return fetchStooqDirect(); })
           .then(function (quote) {
-            renderQuote(quote.price, quote.changePct);
-            labelNode.textContent = '\u5ef6\u8fdf\u884c\u60c5 \u00b7 ' + quote.date + ' ' + quote.time + ' ET';
-            setNote('GitHub \u5b9a\u65f6\u62c9\u53d6 \u00b7 \u5ef6\u8fdf\u7ea6 15 \u5206\u949f \u00b7 \u6570\u636e\u6e90', sourceUrls[quote.source] || sourceUrls.stooq, sourceLabel(quote.source) + ' \u2197');
+            viaGithub = true;
+            return quote;
+          })
+          .catch(fetchDirectStooq)
+          .then(function (quote) {
+            renderQuote(quote, viaGithub);
           })
           .catch(function () {
             labelNode.textContent = fallbackLabel;
             priceNode.innerHTML = fallbackPrice;
-            setNote('\u5b9e\u65f6\u884c\u60c5\u6682\u4e0d\u53ef\u7528\uff08\u7f51\u7edc\u6216\u6570\u636e\u6e90\u9650\u5236\uff09\uff0c\u4ecd\u663e\u793a\u4e0a\u6b21\u6536\u76d8\u4ef7', sourceUrls.stooq, '\u5728 STOOQ \u67e5\u770b \u2197');
+            setNote('实时行情暂不可用（网络或数据源限制），仍显示上次收盘价', '在 STOOQ 查看 ↗');
           })
           .finally(function () {
             if (!silent) {
