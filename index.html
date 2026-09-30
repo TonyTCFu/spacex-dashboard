@@ -161,17 +161,15 @@
     .event-date { color: var(--accent); font: 600 12px/1.4 "IBM Plex Mono", monospace; }
     .event h3 { margin: 0 0 4px; font-size: 16px; }
     .event p { margin: 0; color: var(--muted); font-size: 13px; }
-    .tl-sub { padding: 14px 0 2px; font: 700 13px/1.4 "IBM Plex Sans Condensed", sans-serif; letter-spacing: .06em; color: var(--ink); text-transform: uppercase; }
-    .tl-sub span { color: var(--muted); font-weight: 400; letter-spacing: 0; text-transform: none; }
-    .pt-list { padding: 2px 0 6px; }
-    .pt-row { display: grid; grid-template-columns: 148px 1fr 108px; gap: 12px; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
-    .pt-row:last-child { border-bottom: 0; }
-    .pt-firm { color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .pt-track { height: 7px; background: var(--line); }
-    .pt-bar { height: 100%; background: var(--accent); }
-    .pt-val { text-align: right; font-family: "IBM Plex Mono", monospace; font-size: 12px; }
-    .pt-val em { display: block; color: var(--muted); font-style: normal; font-size: 11px; }
-    .pt-note { padding: 8px 0 2px; color: var(--muted); font-size: 12px; }
+    .ladder { display: grid; gap: 10px; margin-top: 14px; }
+    .ladder-row { display: grid; grid-template-columns: 168px 1fr 136px; gap: 12px; align-items: center; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+    .ladder-row:last-child { padding-bottom: 0; border-bottom: 0; }
+    .ladder-firm { font: 600 13px/1.35 "IBM Plex Mono", monospace; }
+    .ladder-firm small { display: block; margin-top: 2px; color: var(--muted); font: 400 10px/1.4 "IBM Plex Mono", monospace; }
+    .ladder-track { height: 8px; background: var(--surface-2); }
+    .ladder-track span { display: block; height: 100%; background: var(--accent); }
+    .ladder-stat { text-align: right; font: 600 13px/1.5 "IBM Plex Mono", monospace; white-space: nowrap; }
+    .ladder-stat small { display: block; color: var(--positive); font-weight: 500; font-size: 11px; }
     .source-note { padding: 18px; border: 1px dashed var(--line-strong); color: var(--muted); font-size: 12px; }
     .source-note strong { color: var(--ink); }
     footer { margin-top: 56px; padding-top: 18px; border-top: 2px solid var(--ink); color: var(--muted); font-size: 12px; }
@@ -210,6 +208,9 @@
       .plain-table td { border: 0; padding: 3px 0; }
       .plain-table td::before { content: attr(data-label); display: inline-block; width: 43%; color: var(--muted); font-size: 11px; }
       .event { grid-template-columns: 1fr; gap: 4px; }
+      .ladder-row { grid-template-columns: 1fr; gap: 5px; padding-bottom: 8px; }
+      .ladder-stat { text-align: left; }
+      .ladder-stat small { display: inline; margin-left: 8px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .quote-refresh { transition: none; } }
   </style>
@@ -220,28 +221,28 @@
       <div>
         <div class="ticker">NASDAQ · SPCX / RESEARCH SNAPSHOT</div>
         <h1>公开市场后的 SpaceX</h1>
-        <p class="mast-note">价格、运营、财务、空头、估值与产业影响的研究看板。收盘数据锁定至 2026-09-29（美东）；盘中可手动刷新行情，其余数字均按旁注日期呈现。</p>
+        <p class="mast-note">价格、运营、财务、空头、估值与产业影响的研究看板。收盘数据锁定至 2026-09-30（美东）；盘中可手动刷新行情，其余数字均按旁注日期呈现。</p>
       </div>
-      <div class="asof"><strong>数据快照 · 2026-09-29</strong>美股收盘 · ET · USD</div>
+      <div class="asof"><strong>数据快照 · 2026-09-30</strong>美股收盘 · ET · USD</div>
     </header>
 
     <div class="snapshot-warning"><strong>先看数据边界：</strong>行情来自已验证的数据 feed；多数财务与 S-1 数字来自媒体对申报文件的报道，本次研究未直接核验 SEC 原始文件。分析师目标与技术位属于第三方观点，不等于事实或投资建议。</div>
 
     <nav class="section-nav" aria-label="页面章节">
-      <a href="#market">行情</a><a href="#operations">运营</a><a href="#financials">财务</a><a href="#short">做空</a><a href="#valuation">估值</a><a href="#thesis">为什么投资</a><a href="#risks">风险</a><a href="#events">动态</a>
+      <a href="#market">行情</a><a href="#operations">运营</a><a href="#financials">财务</a><a href="#short">做空</a><a href="#valuation">估值</a><a href="#thesis">为什么投资</a><a href="#risks">风险</a><a href="#events">事件雷达</a>
     </nav>
 
     <section class="metrics" aria-label="关键数字">
       <article class="metric primary">
-        <span class="metric-label" id="quoteLabel">收盘价 · 2026-09-29</span>
-        <span class="metric-value" id="quotePrice">$149.24 <small class="pos" style="font-size:.45em">+2.59%</small></span>
-        <div class="metric-sub" id="quoteNote">较前收盘 $145.47 上涨 $3.77 · 截至 2026-09-29 16:00 ET · Nasdaq 官方 API</div>
+        <span class="metric-label" id="quoteLabel">收盘价 · 2026-09-30</span>
+        <span class="metric-value" id="quotePrice">$150.86 <small class="pos" style="font-size:.45em">+1.09%</small></span>
+        <div class="metric-sub" id="quoteNote">较前收盘 $149.24（2026-09-29）上涨 $1.62 · 截至 2026-09-30 16:00 ET · 来源 Nasdaq 官方 API（经 GitHub 定时快照：盘后 18:11 ET $150.77 / −0.06% 倒推收盘；marketbeat 盘中 $150.86 佐证）</div>
         <button type="button" class="quote-refresh" id="quoteRefresh">↻ 刷新实时行情</button>
       </article>
       <article class="metric">
-        <span class="metric-label">市值 · 2026-09-29</span>
-        <span class="metric-value">≈$2.02T</span>
-        <div class="metric-sub">截至 2026-09-29 收盘 · Finnhub</div>
+        <span class="metric-label">市值 · 2026-09-30</span>
+        <span class="metric-value">≈$2.0T</span>
+        <div class="metric-sub">截至 2026-09-30 收盘 · ad-hoc-news</div>
       </article>
       <article class="metric">
         <span class="metric-label">空头仓位 · 2026-09-15</span>
@@ -265,17 +266,17 @@
             <button type="button" data-range="1m" aria-pressed="false">近 1 个月</button>
           </div>
         </div>
-        <div class="chart-wrap"><svg id="priceChart" viewBox="0 0 960 330" role="img" aria-label="SPCX 自 2026 年 6 月 15 日可比区间至 2026 年 9 月 29 日的每日收盘价折线图"></svg></div>
+        <div class="chart-wrap"><svg id="priceChart" viewBox="0 0 960 330" role="img" aria-label="SPCX 自 2026 年 6 月 15 日可比区间至 2026 年 9 月 30 日的每日收盘价折线图"></svg></div>
         <div class="chart-readout" id="chartReadout">移动指针查看日期与收盘价</div>
-        <div class="chart-note">纵轴按可见数据范围缩放，非零基线；日期按真实时间间隔绘制。数据截至 2026-09-29。<a class="cite" href="https://finnhub.io/?q=%22SPCX%22" target="_blank" rel="noreferrer">FINNHUB ↗</a></div>
+        <div class="chart-note">纵轴按可见数据范围缩放，非零基线；日期按真实时间间隔绘制。数据截至 2026-09-30。<a class="cite" href="https://finnhub.io/?q=%22SPCX%22" target="_blank" rel="noreferrer">FINNHUB ↗</a></div>
       </div>
       <div class="data-grid" style="margin-top:12px">
-        <div class="datum"><span class="k">开盘 / 最高 / 最低</span><span class="v">$146.675 / $150.06 / $145.47</span><span class="k">截至 2026-09-29 收盘 · Finnhub</span></div>
-        <div class="datum"><span class="k">盘后参考价</span><span class="v pos">$149.63</span><span class="k">截至 2026-09-29 19:41 ET · Nasdaq · 非官方收盘</span></div>
-        <div class="datum"><span class="k">成交量</span><span class="v">80,023,309 股</span><span class="k">截至 2026-09-29 收盘 · Nasdaq</span></div>
-        <div class="datum"><span class="k">52 周区间</span><span class="v">$104.83 – $225.64</span><span class="k">截至 2026-09-29 · Nasdaq</span></div>
-        <div class="datum"><span class="k">前收盘</span><span class="v">$145.47</span><span class="k">2026-09-28 收盘 · Nasdaq</span></div>
-        <div class="datum"><span class="k">当日涨跌</span><span class="v pos">+$3.77 · +2.59%</span><span class="k">截至 2026-09-29 16:00 ET · Nasdaq</span></div>
+        <div class="datum"><span class="k">开盘 / 最高 / 最低</span><span class="v"><span class="tag unavailable">待核实</span> / $152.58 / <span class="tag unavailable">待核实</span></span><span class="k">截至 2026-09-30 · 盘中最高经 marketbeat 盘中数据；开盘价与日内最低未核实</span></div>
+        <div class="datum"><span class="k">盘后参考价</span><span class="v">$150.77 <small class="neg" style="font-size:.5em">−0.06%</small></span><span class="k">截至 2026-09-30 18:11 ET · Nasdaq · 非官方收盘价；收盘价据此倒推</span></div>
+        <div class="datum"><span class="k">成交量（盘中值）</span><span class="v">约 79.0M 股</span><span class="k">marketbeat 盘中数据 · 截至 2026-09-30；收盘总量未核实</span></div>
+        <div class="datum"><span class="k">52 周区间</span><span class="v">$104.83 – $225.64</span><span class="k">截至 2026-09-30 · Nasdaq</span></div>
+        <div class="datum"><span class="k">前收盘</span><span class="v">$149.24</span><span class="k">2026-09-29 收盘 · Nasdaq</span></div>
+        <div class="datum"><span class="k">当日涨跌</span><span class="v pos">+$1.62 · +1.09%</span><span class="k">截至 2026-09-30 16:00 ET · Nasdaq</span></div>
         <div class="datum"><span class="k">IPO 发行价</span><span class="v">$135</span><span class="k">2026-06 上市 · 历史数据，来源待核实</span></div>
         <div class="datum"><span class="k">历史口径</span><span class="v"><span class="tag unavailable">不可比</span></span><span class="k">2026-06-15 前 SPCX 曾属另一 ETF</span></div>
       </div>
@@ -331,16 +332,17 @@
     <section class="section" id="short">
       <div class="section-head"><h2>做空与借券</h2><span class="section-index">04 / SHORT</span></div>
       <div class="data-grid">
-        <div class="datum"><span class="k">Short interest</span><span class="v">162,252,035 股</span><span class="k">结算日 2026-09-15 · 最新已发布报告；09-30 报告尚未发布 · <a class="cite" href="https://www.finra.org/finra-data/browse-catalog/equity-short-interest/data" target="_blank" rel="noreferrer">FINRA ↗</a></span></div>
+        <div class="datum"><span class="k">Short interest</span><span class="v">162,252,035 股</span><span class="k">结算日 2026-09-15（最新已发布报告）；9/30 结算报告尚未发布 · <a class="cite" href="https://www.finra.org/finra-data/browse-catalog/equity-short-interest/data" target="_blank" rel="noreferrer">FINRA ↗</a></span></div>
         <div class="datum"><span class="k">空头变化（半月）</span><span class="v pos">−6.55%</span><span class="k">截至 2026-09-15 · FINRA</span></div>
         <div class="datum"><span class="k">Short % of float</span><span class="v">≈1.24%</span><span class="k">截至 2026-09-15 · <a class="cite" href="https://www.marketbeat.com/stocks/NASDAQ/SPCX/short-interest/" target="_blank" rel="noreferrer">MarketBeat ↗</a></span></div>
         <div class="datum"><span class="k">Days to cover</span><span class="v">≈2.0 天</span><span class="k">截至 2026-09-15 · FINRA / MarketBeat</span></div>
+        <div class="datum"><span class="k">日度做空成交比</span><span class="v">59.50</span><span class="k">截至 2026-09-29 · 两周高点 · finbold 第三方日度数据</span></div>
         <div class="datum"><span class="k">借券费率</span><span class="v">≈0.41% / 年</span><span class="k">截至 2026-09-29 · IBKR，经 Finshort · 第三方参考</span></div>
         <div class="datum"><span class="k">借券难度</span><span class="v"><span class="tag">易借</span></span><span class="k">截至 2026-09-29 · DTC 约 2 天、费率低、流动性充足</span></div>
         <div class="datum"><span class="k">ORTEX SI / free float</span><span class="v">30.1%</span><span class="k">截至 2026-09-25 · 第三方估算、仅供参考 · ortex.news</span></div>
         <div class="datum"><span class="k">ORTEX 周变动 / availability</span><span class="v">≈+10pp / 170%</span><span class="k">截至 2026-09-25 · 第三方估算、仅供参考 · ortex.news</span></div>
       </div>
-      <div class="source-note" style="margin-top:12px"><strong>口径警示：</strong>FINRA 最新已发布报告的结算日为 2026-09-15，09-30 结算报告尚未发布；MarketBeat 按其流通盘口径给出的 short float 约 1.24%。ORTEX 经 ortex.news 报道的 30.1% 使用不同的 free float 口径，且为截至 2026-09-25 的第三方周度估算，不能与 FINRA / MarketBeat 数字直接比较。0.41% 年化借券费率为 IBKR 经 Finshort 提供的第三方参考；本页“易借”分级截至 2026-09-29，依据为 days to cover 约 2 天、借券费率低与流动性充足，实际成本仍以券商实时 locate 报价为准。另注：2026-06-15 之前，SPCX 对应“The SPAC and New Issue ETF”，更早 FINRA 空头历史不可比。</div>
+      <div class="source-note" style="margin-top:12px"><strong>口径警示：</strong>FINRA 最新已发布报告的结算日为 2026-09-15，9/30 结算报告尚未发布；MarketBeat 按其流通盘口径给出的 short float 约 1.24%。finbold 的 2026-09-29 日度做空成交比 59.50（两周高点）为第三方日度数据，口径与 FINRA 半月度结算数据不同。ORTEX 经 ortex.news 报道的 30.1% 使用不同的 free float 口径，且为截至 2026-09-25 的第三方周度估算，不能与 FINRA / MarketBeat 数字直接比较。0.41% 年化借券费率为 IBKR 经 Finshort 提供的第三方参考；本页“易借”分级截至 2026-09-29，依据为 days to cover 约 2 天、借券费率低与流动性充足，实际成本仍以券商实时 locate 报价为准。另注：2026-06-15 之前，SPCX 对应“The SPAC and New Issue ETF”，更早 FINRA 空头历史不可比。</div>
     </section>
 
     <section class="section" id="valuation">
@@ -397,45 +399,56 @@
     </section>
 
     <section class="section" id="events">
-      <div class="section-head"><h2>事件雷达</h2><span class="section-index">08 / EVENT RADAR</span></div>
-      <div class="panel" style="padding:0 18px">
-        <!-- EVENT-RADAR: 每周定时任务维护本区块。新增事件按日期插入对应分组；已发生事件保留并补充结果/股价影响；目标价随分析师更新同步。 -->
-        <div class="tl-sub">分析师目标价 <span>基准：2026-09-29 收盘 $149.24 · 均为 Buy / Outperform</span></div>
-        <div class="pt-list">
-          <div class="pt-row"><span class="pt-firm">Morgan Stanley</span><div class="pt-track"><div class="pt-bar" style="width:100%"></div></div><span class="pt-val">$300<em>+101.0%</em></span></div>
-          <div class="pt-row"><span class="pt-firm">CLSA</span><div class="pt-track"><div class="pt-bar" style="width:83.3%"></div></div><span class="pt-val">$250<em>+67.5%</em></span></div>
-          <div class="pt-row"><span class="pt-firm">Bernstein</span><div class="pt-track"><div class="pt-bar" style="width:82.7%"></div></div><span class="pt-val">$248<em>+66.2%</em></span></div>
-          <div class="pt-row"><span class="pt-firm">BofA Securities</span><div class="pt-track"><div class="pt-bar" style="width:78.3%"></div></div><span class="pt-val">$235<em>+57.5%</em></span></div>
-          <div class="pt-row"><span class="pt-firm">Deutsche Bank</span><div class="pt-track"><div class="pt-bar" style="width:78.3%"></div></div><span class="pt-val">$235<em>+57.5%</em></span></div>
-          <div class="pt-row"><span class="pt-firm">Evercore ISI</span><div class="pt-track"><div class="pt-bar" style="width:76.7%"></div></div><span class="pt-val">$230<em>+54.1%</em></span></div>
-          <div class="pt-row"><span class="pt-firm">RBC Capital</span><div class="pt-track"><div class="pt-bar" style="width:75%"></div></div><span class="pt-val">$225<em>+50.8%</em></span></div>
-          <div class="pt-row"><span class="pt-firm">Clear Street</span><div class="pt-track"><div class="pt-bar" style="width:72.3%"></div></div><span class="pt-val">$217<em>+45.4%</em></span></div>
-          <div class="pt-row"><span class="pt-firm">UBS</span><div class="pt-track"><div class="pt-bar" style="width:70%"></div></div><span class="pt-val">$210<em>+40.7%</em></span></div>
-          <div class="pt-row"><span class="pt-firm">TD Cowen</span><div class="pt-track"><div class="pt-bar" style="width:66.7%"></div></div><span class="pt-val">$200<em>+34.0%</em></span></div>
-          <div class="pt-row"><span class="pt-firm">Mizuho</span><div class="pt-track"><div class="pt-bar" style="width:66.7%"></div></div><span class="pt-val">$200<em>+34.0%</em></span></div>
+      <div class="section-head"><h2>事件雷达</h2><span class="section-index">08 / RADAR</span></div>
+      <!-- EVENT-RADAR -->
+      <article class="card">
+        <h3>分析师目标价榜 <span class="tag">基准 · 2026-09-30 收盘 $150.86</span></h3>
+        <p>12 家覆盖机构均为 Buy / Outperform 评级，涨幅按 9/30 收盘价 $150.86 计算；Needham 为本次新增（约 9/29 重申）。</p>
+        <div class="ladder">
+          <div class="ladder-row"><div class="ladder-firm">Morgan Stanley</div><div class="ladder-track"><span style="width:100%"></span></div><div class="ladder-stat">$300<small>+98.9%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">CLSA<small>Outperform · 首次覆盖 9/28</small></div><div class="ladder-track"><span style="width:83.33%"></span></div><div class="ladder-stat">$250<small>+65.7%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Needham<small>Buy · 约 9/29 重申</small></div><div class="ladder-track"><span style="width:83.33%"></span></div><div class="ladder-stat">$250<small>+65.7%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Bernstein</div><div class="ladder-track"><span style="width:82.67%"></span></div><div class="ladder-stat">$248<small>+64.4%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">BofA</div><div class="ladder-track"><span style="width:78.33%"></span></div><div class="ladder-stat">$235<small>+55.8%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Deutsche</div><div class="ladder-track"><span style="width:78.33%"></span></div><div class="ladder-stat">$235<small>+55.8%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Evercore</div><div class="ladder-track"><span style="width:76.67%"></span></div><div class="ladder-stat">$230<small>+52.5%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">RBC</div><div class="ladder-track"><span style="width:75%"></span></div><div class="ladder-stat">$225<small>+49.1%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Clear Street</div><div class="ladder-track"><span style="width:72.33%"></span></div><div class="ladder-stat">$217<small>+43.8%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">UBS<small>Buy · 重申 9/29</small></div><div class="ladder-track"><span style="width:70%"></span></div><div class="ladder-stat">$210<small>+39.2%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">TD Cowen<small>Buy · 首次覆盖 9/28</small></div><div class="ladder-track"><span style="width:66.67%"></span></div><div class="ladder-stat">$200<small>+32.6%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Mizuho</div><div class="ladder-track"><span style="width:66.67%"></span></div><div class="ladder-stat">$200<small>+32.6%</small></div></div>
         </div>
-        <div class="pt-note">覆盖日期 2026-09-28/29；涨幅相对 2026-09-29 收盘价。<a class="cite" href="https://www.tipranks.com/stocks/spcx/forecast" target="_blank" rel="noreferrer">SOURCE ↗</a></div>
-        <div class="tl-sub">即将到来</div>
-        <article class="event"><div class="event-date">2026-10-01<br>11:10 ET</div><div><h3>Crew-13 发射</h3><p>NASA 第 13 次商业载人任务：Falcon 9 + Dragon 送 4 名宇航员前往国际空间站，约 7 小时 50 分对接。<a class="cite" href="https://www.nasa.gov/news-release/nasa-sets-crew-13-launch-docking-coverage/" target="_blank" rel="noreferrer">SOURCE ↗</a></p></div></article>
-        <article class="event"><div class="event-date">2026-10-09<br>2026-10-24</div><div><h3>锁定期股份释放 · 两轮</h3><p>各约 328M 股（Day 120 / Day 135 批次）；实际出售量未知，过往解禁日曾带来抛压。<a class="cite" href="https://www.fool.com/investing/2026/09/15/spacexs-next-share-unlock-is-coming-history-says-t/" target="_blank" rel="noreferrer">SOURCE ↗</a></p></div></article>
-        <article class="event"><div class="event-date">约 2026-11-05<br><span class="tag">公司未确认</span></div><div><h3>Q3 2026 财报</h3><p>第三方日历存在 11 月 3 日与 5 日两种说法；财报后第 2 个交易日约 13 亿股（28%）解禁。<a class="cite" href="https://www.vantagemarkets.com/market-analysis/spacex-stock-price-analysis-monthly-outlook/" target="_blank" rel="noreferrer">SOURCE ↗</a></p></div></article>
-        <article class="event"><div class="event-date">约 2026-12-08</div><div><h3>180 天锁定期最后批次</h3><p>约 798M 股释放；Musk 及部分核心股东股份锁至 2027 年。<a class="cite" href="https://www.fool.com/investing/2026/09/15/spacexs-next-share-unlock-is-coming-history-says-t/" target="_blank" rel="noreferrer">SOURCE ↗</a></p></div></article>
-        <article class="event"><div class="event-date">2027-06-12</div><div><h3>Musk 锁定期到期 / S&P 500 最早门槛</h3><p>约 6.4B 股锁定期到期；同时达到上市 12 个月的最早门槛，但 GAAP 盈利测试仍可能阻止纳入。<a class="cite" href="https://www.fool.com/investing/2026/09/23/spacex-can-t-join-the-s-and-p-500-before-june-2027-and-its-losses-could-keep-it-out-longer/" target="_blank" rel="noreferrer">SOURCE ↗</a></p></div></article>
-        <div class="tl-sub">近期已发生</div>
-        <article class="event"><div class="event-date">2026-09-28<br><span class="tag">FLIGHT 14</span></div><div><h3>Starship 首次入轨并部署 26 颗 Starlink V3</h3><p>Ship 41 于美东 08:48 从 Texas 的 Starbase 发射，首次进入地球轨道并部署 26 颗运行正常的 Starlink V3 商用卫星；这是 Starship 首个产生收入的载荷，卫星将逐步升轨后服务客户。上升段中，Super Heavy 的 1 台 Raptor 与 Ship 41 的 1 台 Raptor Vacuum 发动机提前关机；任务由原计划约 10 小时、6 圈缩短为约 3 小时，并在首个决策点提前结束。两级均未回收：Super Heavy 落入墨西哥湾并按计划演示飞行终止系统，Ship 41 在北太平洋溅落。NASA 署长 Jared Isaacman 在 X 上祝贺。来源：USA Today、Reuters、Space.com（2026-09-29 报道）。</p></div></article>
-        <article class="event"><div class="event-date">2026-09-24<br><span class="tag">LOCK-UP</span></div><div><h3>约 3.28 亿股锁定期到期</h3><p>截至 2026-09-24，约 3.28 亿股解禁并可进入交易；总裁 Gwynne Shotwell 按预设计划出售约 $52.5M 股票。来源：coingabbar（2026-09-29）。</p></div></article>
-        <article class="event"><div class="event-date">2026-09-29<br><span class="tag">ANALYSTS</span></div><div><h3>分析师密集覆盖：TD Cowen / UBS / CLSA</h3><p>TD Cowen 首次覆盖 Buy / $200；UBS 重申 Buy / $210；CLSA 首次覆盖 Outperform / $250；约 76% 覆盖 SPCX 的分析师给予 Buy 评级。当日股价 +2.59% 收 $149.24。<a class="cite" href="https://www.tipranks.com/stocks/spcx/forecast" target="_blank" rel="noreferrer">SOURCE ↗</a></p></div></article>
+      </article>
+      <div class="two-col" style="margin-top:12px">
+        <article class="card">
+          <h3>即将到来</h3>
+          <article class="event"><div class="event-date">2026-10-01<br>11:10 ET<br><span class="tag">LAUNCH</span></div><div><h3>Crew-13 载人发射</h3><p>NASA+ 美东 9:20 起开始直播，飞船预计约 19:00 对接 ISS；9/27 已推出至 SLC-40 并完成静态点火。来源：NASA。</p></div></article>
+          <article class="event"><div class="event-date">2026-10-09<br><span class="tag">LOCK-UP</span></div><div><h3>股份锁定期到期（批次）</h3><p>一批股份锁定期到期，可进入二级市场流通；具体股数尚未披露，待核实。</p></div></article>
+          <article class="event"><div class="event-date">2026-10-24<br><span class="tag">LOCK-UP</span></div><div><h3>股份锁定期到期（批次）</h3><p>又一批股份锁定期到期，可进入二级市场流通；具体股数尚未披露，待核实。</p></div></article>
+          <article class="event"><div class="event-date">2026-11-03<br>（预计）<br><span class="tag">EARNINGS</span></div><div><h3>Q3 2026 财报</h3><p>预计公布 Q3 财报（日期尚未获公司确认）。UBS 预测 Q3 营收 $138 亿（高于市场一致预期的 $129 亿）、调整后 EBITDA $75 亿。来源：barchart、coingabbar（日期）；moneycheck（UBS 预测）。</p></div></article>
+          <article class="event"><div class="event-date">2026-12-08<br><span class="tag">LOCK-UP</span></div><div><h3>年内最后解禁批次</h3><p>本轮锁定期到期的最后一个批次；具体股数尚未披露，待核实。</p></div></article>
+          <article class="event" style="border-bottom:0"><div class="event-date">2027-06-12<br><span class="tag">LOCK-UP</span></div><div><h3>Musk 约 6.4B 股锁定期到期</h3><p>Musk 经 Class B 超级投票权持有的约 6.4B 股届时结束锁定期。</p></div></article>
+        </article>
+        <article class="card">
+          <h3>近期已发生</h3>
+          <article class="event"><div class="event-date">2026-09-30<br><span class="tag">FCC</span></div><div><h3>FCC 放行 1000+ MHz 卫星频谱，松绑发射环评</h3><p>FCC 投票开放 12.7GHz 与 42GHz 频段 1000+ MHz 频谱用于卫星服务，Starlink 下行频谱增加 25% 以上；同日 FCC 通过 NEPA 新规，卫星发射、部署与运营不再被认定为须做环境评估的“重大联邦行动”。来源：aistockwire。</p></div></article>
+          <article class="event"><div class="event-date">2026-09-30<br><span class="tag">ANALYSTS</span></div><div><h3>MoffettNathanson：Starship 仍处于早期</h3><p>点评 Starship Flight 14 是重要里程碑，但距离“每小时发射一次”的终极目标仍很远，市场保持谨慎。来源：advanced-television。</p></div></article>
+          <article class="event"><div class="event-date">约 2026-09-29<br><span class="tag">ANALYSTS</span></div><div><h3>Needham 重申 Buy，目标价 $250</h3><p>称 AI 算力协议多数 2026Q4 开始爬坡、至少一单 12 月上线；测算 AI 协议年化收入约 $540 亿，公司目标 2026 年底总 ARR 约 $1000 亿。来源：moneycheck。</p></div></article>
+          <article class="event"><div class="event-date">2026-09-29<br><span class="tag">ANALYSTS</span></div><div><h3>TD Cowen 首次覆盖，目标价 $200</h3><p>TD Cowen 首次覆盖给予 Buy 评级与 $200 目标价，看好 AI 算力租赁增长；约 76% 覆盖 SPCX 的分析师给予 Buy 评级。来源：coincentral（2026-09-29）。</p></div></article>
+          <article class="event"><div class="event-date">2026-09-28<br><span class="tag">FLIGHT 14</span></div><div><h3>Starship 首次入轨并部署 26 颗 Starlink V3</h3><p>Ship 41 于美东 08:48 从 Texas 的 Starbase 发射，首次进入地球轨道并部署 26 颗运行正常的 Starlink V3 商用卫星；这是 Starship 首个产生收入的载荷，卫星将逐步升轨后服务客户。上升段中，Super Heavy 的 1 台 Raptor 与 Ship 41 的 1 台 Raptor Vacuum 发动机提前关机；任务由原计划约 10 小时、6 圈缩短为约 3 小时，并在首个决策点提前结束。两级均未回收：Super Heavy 落入墨西哥湾并按计划演示飞行终止系统，Ship 41 在北太平洋溅落。NASA 署长 Jared Isaacman 在 X 上祝贺。来源：USA Today、Reuters、Space.com（2026-09-29 报道）。</p></div></article>
+          <article class="event" style="border-bottom:0"><div class="event-date">2026-09-24<br><span class="tag">LOCK-UP</span></div><div><h3>约 3.28 亿股锁定期到期</h3><p>截至 2026-09-24，约 3.28 亿股解禁并可进入交易；总裁 Gwynne Shotwell 按预设计划出售约 $52.5M 股票。来源：coingabbar（2026-09-29）。</p></div></article>
+        </article>
       </div>
     </section>
 
-    <section class="source-note"><strong>研究完整性：</strong>截至 2026 年 IPO 披露，融资额存在 $75B 基础发行与约 $85.7B 含超额配售两种口径（来源待核实）；截至 2026 年 S-1 / 13G 披露，Musk 经济权益存在约 36% 与 48.4% 两种口径（来源待核实）；Q3 2026 财报日期未获公司确认。借券费率约 0.41%/年为 IBKR 经 Finshort 提供的截至 2026-09-29 第三方参考；ORTEX 的 30.1% short float 与 170% availability 为截至 2026-09-25 的第三方周度估算，且 float 口径与 FINRA / MarketBeat 不同。“易借”依据 DTC 约 2 天、低费率和充足流动性，实际做空成本以券商实时报价为准。</section>
+    <section class="source-note"><strong>研究完整性：</strong>截至 2026 年 IPO 披露，融资额存在 $75B 基础发行与约 $85.7B 含超额配售两种口径（来源待核实）；截至 2026 年 S-1 / 13G 披露，Musk 经济权益存在约 36% 与 48.4% 两种口径（来源待核实）；Q3 2026 财报日期预计为 2026-11-03（来源 barchart、coingabbar），尚未获公司确认。借券费率约 0.41%/年为 IBKR 经 Finshort 提供的截至 2026-09-29 第三方参考；ORTEX 的 30.1% short float 与 170% availability 为截至 2026-09-25 的第三方周度估算，且 float 口径与 FINRA / MarketBeat 不同。“易借”依据 DTC 约 2 天、低费率和充足流动性，实际做空成本以券商实时报价为准。</section>
 
-    <footer>本页是截至 2026-09-29 美股收盘的静态研究快照；股价卡保留「刷新实时行情」按钮及开盘时段自动刷新，其余数据按固定计划更新；不构成证券研究报告或投资建议。引用链接打开第三方原始页面。</footer>
+    <footer>本页是截至 2026-09-30 美股收盘的静态研究快照；股价卡保留「刷新实时行情」按钮及开盘时段自动刷新，其余数据按固定计划更新；不构成证券研究报告或投资建议。引用链接打开第三方原始页面。</footer>
   </main>
 
   <script>
     (function () {
-      var data = [['2026-06-15',192.50],['2026-06-16',201.80],['2026-06-17',191.82],['2026-06-18',185.00],['2026-06-22',154.60],['2026-06-23',156.11],['2026-06-24',154.54],['2026-06-25',153.00],['2026-06-26',153.23],['2026-06-29',164.19],['2026-06-30',170.86],['2026-07-01',157.54],['2026-07-02',162.00],['2026-07-06',160.42],['2026-07-07',149.47],['2026-07-08',148.30],['2026-07-09',152.16],['2026-07-10',145.30],['2026-07-13',139.14],['2026-07-14',136.08],['2026-07-15',135.27],['2026-07-16',131.11],['2026-07-17',123.99],['2026-07-20',119.85],['2026-07-21',123.54],['2026-07-22',115.26],['2026-07-23',118.24],['2026-07-24',115.07],['2026-07-27',113.50],['2026-07-28',116.41],['2026-07-29',112.55],['2026-07-30',112.20],['2026-07-31',108.37],['2026-08-03',114.53],['2026-08-04',125.33],['2026-08-05',108.27],['2026-08-06',114.92],['2026-08-07',133.11],['2026-08-10',138.74],['2026-08-11',133.29],['2026-08-12',146.15],['2026-08-13',141.29],['2026-08-14',140.00],['2026-08-17',146.23],['2026-08-18',143.34],['2026-08-19',139.65],['2026-08-20',134.00],['2026-08-21',136.97],['2026-08-24',135.00],['2026-08-25',137.95],['2026-08-26',139.63],['2026-08-27',140.87],['2026-08-28',141.50],['2026-08-31',143.69],['2026-09-01',142.23],['2026-09-02',140.71],['2026-09-03',149.74],['2026-09-04',147.95],['2026-09-08',153.47],['2026-09-09',147.55],['2026-09-10',148.18],['2026-09-11',151.21],['2026-09-14',148.15],['2026-09-15',143.49],['2026-09-16',150.88],['2026-09-17',154.81],['2026-09-18',152.71],['2026-09-21',151.85],['2026-09-22',154.72],['2026-09-23',148.36],['2026-09-24',148.03],['2026-09-25',148.68],['2026-09-28',145.47],['2026-09-29',149.24]];
+      var data = [['2026-06-15',192.50],['2026-06-16',201.80],['2026-06-17',191.82],['2026-06-18',185.00],['2026-06-22',154.60],['2026-06-23',156.11],['2026-06-24',154.54],['2026-06-25',153.00],['2026-06-26',153.23],['2026-06-29',164.19],['2026-06-30',170.86],['2026-07-01',157.54],['2026-07-02',162.00],['2026-07-06',160.42],['2026-07-07',149.47],['2026-07-08',148.30],['2026-07-09',152.16],['2026-07-10',145.30],['2026-07-13',139.14],['2026-07-14',136.08],['2026-07-15',135.27],['2026-07-16',131.11],['2026-07-17',123.99],['2026-07-20',119.85],['2026-07-21',123.54],['2026-07-22',115.26],['2026-07-23',118.24],['2026-07-24',115.07],['2026-07-27',113.50],['2026-07-28',116.41],['2026-07-29',112.55],['2026-07-30',112.20],['2026-07-31',108.37],['2026-08-03',114.53],['2026-08-04',125.33],['2026-08-05',108.27],['2026-08-06',114.92],['2026-08-07',133.11],['2026-08-10',138.74],['2026-08-11',133.29],['2026-08-12',146.15],['2026-08-13',141.29],['2026-08-14',140.00],['2026-08-17',146.23],['2026-08-18',143.34],['2026-08-19',139.65],['2026-08-20',134.00],['2026-08-21',136.97],['2026-08-24',135.00],['2026-08-25',137.95],['2026-08-26',139.63],['2026-08-27',140.87],['2026-08-28',141.50],['2026-08-31',143.69],['2026-09-01',142.23],['2026-09-02',140.71],['2026-09-03',149.74],['2026-09-04',147.95],['2026-09-08',153.47],['2026-09-09',147.55],['2026-09-10',148.18],['2026-09-11',151.21],['2026-09-14',148.15],['2026-09-15',143.49],['2026-09-16',150.88],['2026-09-17',154.81],['2026-09-18',152.71],['2026-09-21',151.85],['2026-09-22',154.72],['2026-09-23',148.36],['2026-09-24',148.03],['2026-09-25',148.68],['2026-09-28',145.47],['2026-09-29',149.24],['2026-09-30',150.86]];
       var svg = document.getElementById('priceChart');
       var readout = document.getElementById('chartReadout');
       var buttons = document.querySelectorAll('[data-range]');
