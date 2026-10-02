@@ -170,6 +170,10 @@
     .ladder-track span { display: block; height: 100%; background: var(--accent); }
     .ladder-stat { text-align: right; font: 600 13px/1.5 "IBM Plex Mono", monospace; white-space: nowrap; }
     .ladder-stat small { display: block; color: var(--positive); font-weight: 500; font-size: 11px; }
+    .section-sub { margin: -8px 0 16px; color: var(--muted); font-size: 13px; }
+    .gamma-status { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding: 16px 18px; margin-bottom: 12px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .gamma-badge { display: inline-block; padding: 7px 12px; background: color-mix(in srgb, var(--positive) 14%, var(--surface)); border: 1px solid var(--positive); color: var(--positive); font: 600 13px/1.3 "IBM Plex Mono", monospace; white-space: nowrap; }
+    .gamma-status p { margin: 0; flex: 1 1 260px; color: var(--muted); font-size: 13px; }
     .source-note { padding: 18px; border: 1px dashed var(--line-strong); color: var(--muted); font-size: 12px; }
     .source-note strong { color: var(--ink); }
     footer { margin-top: 56px; padding-top: 18px; border-top: 2px solid var(--ink); color: var(--muted); font-size: 12px; }
@@ -229,7 +233,7 @@
     <div class="snapshot-warning"><strong>先看数据边界：</strong>行情来自已验证的数据 feed；多数财务与 S-1 数字来自媒体对申报文件的报道，本次研究未直接核验 SEC 原始文件。分析师目标与技术位属于第三方观点，不等于事实或投资建议。</div>
 
     <nav class="section-nav" aria-label="页面章节">
-      <a href="#market">行情</a><a href="#operations">运营</a><a href="#financials">财务</a><a href="#short">做空</a><a href="#valuation">估值</a><a href="#thesis">为什么投资</a><a href="#risks">风险</a><a href="#events">事件雷达</a>
+      <a href="#market">行情</a><a href="#options-structure">期权结构</a><a href="#operations">运营</a><a href="#financials">财务</a><a href="#short">做空</a><a href="#valuation">估值</a><a href="#thesis">为什么投资</a><a href="#risks">风险</a><a href="#events">事件雷达</a>
     </nav>
 
     <section class="metrics" aria-label="关键数字">
@@ -280,6 +284,25 @@
         <div class="datum"><span class="k">IPO 发行价</span><span class="v">$135</span><span class="k">2026-06 上市 · 历史数据，来源待核实</span></div>
         <div class="datum"><span class="k">历史口径</span><span class="v"><span class="tag unavailable">不可比</span></span><span class="k">2026-06-15 前 SPCX 曾属另一 ETF</span></div>
       </div>
+    </section>
+
+    <section class="section" id="options-structure">
+      <div class="section-head"><h2>期权结构</h2><span class="section-index">期权结构</span></div>
+      <p class="section-sub">数据截至 2026-10-01，每周更新</p>
+      <div class="gamma-status">
+        <span class="gamma-badge">正 Gamma · 盘整/钉价倾向</span>
+        <p>做市商 Gamma 状态：当前为正 Gamma——做市商涨卖跌买，波动易被压缩、价格倾向盘整钉价；若转为负 Gamma，则波动会被放大。</p>
+      </div>
+      <div class="data-grid">
+        <div class="datum"><span class="k">净做市商 GEX</span><span class="v pos">正</span><span class="k">约 +$31.9M · FlashAlpha</span></div>
+        <div class="datum"><span class="k">Call Wall</span><span class="v">$150</span><span class="k">阻力参考 · 做市商对冲参考位</span></div>
+        <div class="datum"><span class="k">Put Wall</span><span class="v">$145</span><span class="k">支撑参考 · 做市商对冲参考位</span></div>
+        <div class="datum"><span class="k">Max Pain</span><span class="v">$149</span><span class="k">做市商对冲参考位</span></div>
+        <div class="datum"><span class="k">Put-Call 未平仓比</span><span class="v">1.10</span><span class="k">Call 191.9 万张 ／ Put 211.7 万张</span></div>
+        <div class="datum"><span class="k">30 天 ATM IV</span><span class="v">41.2%</span><span class="k">IV Rank 0/100 · 历史低位</span></div>
+        <div class="datum"><span class="k">期权隐含预期波幅</span><span class="v">±$19.49</span><span class="k">±12.9%</span></div>
+      </div>
+      <div class="source-note" style="margin-top:12px">数据来源 OptiView、FlashAlpha（OPRA 延迟数据）。Call/Put Wall 与 Max Pain 为做市商对冲参考位，不构成买卖建议。Gamma Flip 各模型分歧较大，本板块不列固定数值。GEX 正负基于"做市商持有与公开订单流相反头寸"的模型假设。</div>
     </section>
 
     <section class="section" id="operations">
