@@ -231,9 +231,9 @@
       <div>
         <div class="ticker">NASDAQ · SPCX / RESEARCH SNAPSHOT</div>
         <h1>公开市场后的 SpaceX</h1>
-        <p class="mast-note">价格、运营、财务、空头、估值与产业影响的研究看板。收盘数据锁定至 2026-10-22（美东）；盘中可手动刷新行情，其余数字均按旁注日期呈现。</p>
+        <p class="mast-note">价格、运营、财务、空头、估值与产业影响的研究看板。收盘数据锁定至 2026-10-23（美东）；盘中可手动刷新行情，其余数字均按旁注日期呈现。</p>
       </div>
-      <div class="asof"><strong>数据快照 · 2026-10-22 美股收盘</strong>ET · USD</div>
+      <div class="asof"><strong>数据快照 · 2026-10-23 美股收盘</strong>ET · USD</div>
     </header>
 
     <div class="snapshot-warning"><strong>先看数据边界：</strong>行情来自已验证的数据 feed；多数财务与 S-1 数字来自媒体对申报文件的报道，本次研究未直接核验 SEC 原始文件。分析师目标与技术位属于第三方观点，不等于事实或投资建议。</div>
@@ -245,20 +245,20 @@
     <section class="metrics" aria-label="关键数字">
       <article class="metric primary">
         <span class="metric-label">实时行情 <span class="tag" id="quoteStateTag">收盘</span></span>
-        <span class="metric-value"><span id="quotePrice">$144.75</span> <span class="chg neg" id="quoteChg">−$14.56 · −9.14%</span></span>
-        <div class="metric-sub" id="quoteMeta">报价 16:00 ET · 2026-10-22 收盘 · 较前收盘 $159.31 · Finnhub / techi.com / Motley Fool 交叉核对 · 开盘 $154.21 接近全天高点后单边走弱，收盘接近日低 $143.21；盘后无可核实报价</div>
+        <span class="metric-value"><span id="quotePrice">$147.49</span> <span class="chg pos" id="quoteChg">+$2.74 · +1.89%</span></span>
+        <div class="metric-sub" id="quoteMeta">报价 16:00 ET · 2026-10-23 收盘 · 较前收盘 $144.75 · Fool / Finnhub / stockanalysis / spcx-trader 交叉核对收盘一致 · 开盘 $147.93 / 最高 $149.75 / 最低 $144.085（Finnhub）；盘后 16:36 EDT $147.72（+0.16%，stockanalysis.com）</div>
         <div class="metric-sub quote-status" id="quoteStatus" aria-live="polite"></div>
         <button type="button" class="quote-refresh" id="refreshQuote">↻ 刷新实时行情</button>
       </article>
       <article class="metric">
-        <span class="metric-label">市值 · 2026-10-22</span>
-        <span class="metric-value">~$2.01T</span>
-        <div class="metric-sub">截至 2026-10-22 收盘 · Finnhub 口径</div>
+        <span class="metric-label">市值 · 2026-10-23</span>
+        <span class="metric-value">~$1.9–2.0T</span>
+        <div class="metric-sub">截至 2026-10-23 收盘 · Finnhub $2.01T / MarketBeat 附属稿 $1.91T / thecoinrepublic 约 $1.97T，源于流通股口径差异，未能核实统一口径</div>
       </article>
       <article class="metric">
         <span class="metric-label">空头仓位 · 2026-09-30</span>
         <span class="metric-value">181.00M</span>
-        <div class="metric-sub">空头占流通盘 20.48%（占总股本约 1.37%）· 结算日 2026-09-30 · 2026-10-23 重新核查 · FINRA，经 <a class="cite" href="http://chartexchange.com/symbol/nasdaq-spcx/short-interest/" target="_blank" rel="noreferrer">CHARTEXCHANGE ↗</a></div>
+        <div class="metric-sub">空头占流通盘 20.48%（占总股本约 1.37%）· 结算日 2026-09-30 · 2026-10-24 重新核查 · FINRA，经 <a class="cite" href="http://chartexchange.com/symbol/nasdaq-spcx/short-interest/" target="_blank" rel="noreferrer">CHARTEXCHANGE ↗</a></div>
       </article>
       <article class="metric">
         <span class="metric-label">P/S (TTM) · 2026-09-25</span>
@@ -277,57 +277,58 @@
             <button type="button" data-range="1m" aria-pressed="false">近 1 个月</button>
           </div>
         </div>
-        <div class="chart-wrap"><svg id="priceChart" viewBox="0 0 960 330" role="img" aria-label="SPCX 自 2026 年 6 月 15 日可比区间至 2026 年 10 月 22 日的每日收盘价折线图"></svg></div>
+        <div class="chart-wrap"><svg id="priceChart" viewBox="0 0 960 330" role="img" aria-label="SPCX 自 2026 年 6 月 15 日可比区间至 2026 年 10 月 23 日的每日收盘价折线图"></svg></div>
         <div class="chart-readout" id="chartReadout">移动指针查看日期与收盘价</div>
-        <div class="chart-note">纵轴按可见数据范围缩放，非零基线；日期按真实时间间隔绘制。数据截至 2026-10-22。<a class="cite" href="https://stockanalysis.com/stocks/spcx/" target="_blank" rel="noreferrer">STOCKANALYSIS ↗</a></div>
+        <div class="chart-note">纵轴按可见数据范围缩放，非零基线；日期按真实时间间隔绘制。数据截至 2026-10-23。<a class="cite" href="https://stockanalysis.com/stocks/spcx/" target="_blank" rel="noreferrer">STOCKANALYSIS ↗</a></div>
       </div>
       <div class="data-grid" style="margin-top:12px">
-        <div class="datum"><span class="k">开盘 / 最高 / 最低</span><span class="v">$154.21 / $154.255 / $143.21</span><span class="k">截至 2026-10-22 收盘 · Finnhub / techi.com 交叉核对（techi 同口径开 $154.19、高 $154.22、低 $143.21，略差已注记）</span></div>
-        <div class="datum"><span class="k">5 日回报</span><span class="v neg">−2.60%</span><span class="k">截至 2026-10-22 收盘 $144.75，自 2026-10-15 收盘 $148.62 起算（本页价格序列口径）</span></div>
-        <div class="datum"><span class="k">成交量</span><span class="v">约 193.8M 股</span><span class="k">截至 2026-10-22 收盘 · Motley Fool 193.8M，高于 3 个月均量 99.1M 约 96%；zolmax 194,023,245；spcx-trader 口径 166,545,390 较低，三方口径分歧已注记；Finnhub 日线本次未含 10/22</span></div>
-        <div class="datum"><span class="k">52 周区间</span><span class="v">$104.83 – $225.64</span><span class="k">截至 2026-10-22 · Finnhub；上市以来高点 6/16、低点 8/3</span></div>
-        <div class="datum"><span class="k">前收盘</span><span class="v">$159.31</span><span class="k">2026-10-21 收盘</span></div>
-        <div class="datum"><span class="k">当日涨跌</span><span class="v neg">−$14.56 · −9.14%</span><span class="k">截至 2026-10-22 16:00 ET；开盘 $154.21（≈全天高点）后单边走弱，收 $144.75 接近日低 $143.21；盘后无可核实报价</span></div>
-        <div class="datum"><span class="k">IPO / 首日收盘比较</span><span class="v">+7.2% / <span class="neg">−10.1%</span></span><span class="k">截至 2026-10-22：相对 IPO 发行价 $135 / 首日收盘 $160.95，以 $144.75 重算</span></div>
+        <div class="datum"><span class="k">开盘 / 最高 / 最低</span><span class="v">$147.93 / $149.75 / $144.085</span><span class="k">截至 2026-10-23 收盘 · Finnhub</span></div>
+        <div class="datum"><span class="k">5 日回报</span><span class="v pos">+1.00%</span><span class="k">截至 2026-10-23 收盘 $147.49，自 2026-10-16 收盘 $146.03 起算（本页价格序列口径）</span></div>
+        <div class="datum"><span class="k">成交量</span><span class="v">约 1.09 亿股</span><span class="k">截至 2026-10-23 收盘 · Fool 口径约 109.4M（约高于 3 个月均值 99.4M 约 10%）；MarketBeat 附属稿 109,479,767；spcx-trader 101,576,717，未能核实差异原因，口径分歧已注记</span></div>
+        <div class="datum"><span class="k">52 周区间</span><span class="v">$104.83 – $225.64</span><span class="k">截至 2026-10-23 · Finnhub / MarketBeat 附属稿；CleaRank 口径 $211.39 / $108.27（高点 6/16）、CapitalSnitch 口径 $201.80 / $108.27（高点 6/16），图表窗口口径不同，分歧已注记</span></div>
+        <div class="datum"><span class="k">前收盘</span><span class="v">$144.75</span><span class="k">2026-10-22 收盘</span></div>
+        <div class="datum"><span class="k">当日涨跌</span><span class="v pos">+$2.74 · +1.89%</span><span class="k">截至 2026-10-23 16:00 ET；解禁日（10/22）大跌后小幅修复：最高 $149.75、最低 $144.085，收盘仍低于 10/21 收盘 $159.31；盘后 16:36 EDT $147.72（+0.16%，stockanalysis.com）</span></div>
+        <div class="datum"><span class="k">IPO / 首日收盘比较</span><span class="v">+9.2% / <span class="neg">−8.4%</span></span><span class="k">截至 2026-10-23：相对 IPO 发行价 $135 / 首日收盘 $160.95，以 $147.49 重算（spcx-trader 口径）</span></div>
         <div class="datum"><span class="k">Beta</span><span class="v">4.85</span><span class="k">截至 2026-10-19</span></div>
       </div>
     </section>
 
     <section class="section" id="options-structure">
       <div class="section-head"><h2>期权结构</h2><span class="section-index">期权结构</span></div>
-      <p class="section-sub"><strong>数据截至 2026-10-21 快照</strong>：OptiView Oct 21, 2026 3:55 PM ET / FlashAlpha Oct 21, 2026 4:45 PM ET；距 2026-10-22 收盘差 1 个交易日；OCC 数据 T+1 滞后、OPRA 15 分钟延迟；10-22 口径数据预计北京时间 10-23 上午 ~08:30 后 OCC 更新，届时可再刷新。现价对比基准为 2026-10-22 收盘 $144.75。</p>
+      <p class="section-sub"><strong>数据截至 2026-10-22 快照</strong>：OptiView Oct 22, 2026 3:55 PM ET / FlashAlpha Oct 22, 2026 4:45 PM ET；距 2026-10-23 收盘差 1 个交易日；OCC 数据 T+1 滞后、OPRA 15 分钟延迟；快照参考价 OptiView $145.12 / FlashAlpha $145.38（10/22 实际收盘 $144.75，口径差异已注记）。现价对比基准为 2026-10-23 收盘 $147.49。</p>
       <div class="gamma-status">
-        <span class="gamma-badge">正 Gamma（减震器）</span>
-        <p>净做市商 GEX 为 +160.6M（FlashAlpha 2026-10-21 快照），较上期 +81.2M 大幅增强：正 Gamma 是“减震器”（做市商涨了卖、跌了买，波动被压住），负 Gamma 是“加速器”（追涨杀跌，波动放大）；本期减震垫变厚。本页不展示 Gamma Flip 具体数值。</p>
+        <span class="gamma-badge negative">负 Gamma（加速器）</span>
+        <p>净做市商 GEX 为 −96.7M（FlashAlpha 2026-10-22 快照），由上期 +160.6M 剧烈反转、由正转负：正 Gamma 是“减震器”（做市商涨了卖、跌了买，波动被压住），负 Gamma 是“加速器”（追涨杀跌，波动放大）；本期减震器翻成加速器，波动放大风险上升。本页不展示 Gamma Flip 具体数值。</p>
       </div>
       <div class="data-grid">
-        <div class="datum"><span class="k">净做市商 GEX</span><span class="v pos">+160.6M</span><span class="k">正 Gamma · FlashAlpha 2026-10-21 16:45 ET · 上期 +81.2M，正 Gamma 大幅增强</span></div>
-        <div class="datum"><span class="k">FlashAlpha ATM IV</span><span class="v">55.6%</span><span class="k">FlashAlpha 2026-10-21 16:45 ET · 其快照价 $159.11 · 与 OptiView 30 天 IV 口径不同，不可混用</span></div>
-        <div class="datum"><span class="k">HV20（20 日历史波动率）</span><span class="v">56.2%</span><span class="k">FlashAlpha 2026-10-21 · 口径同上，不可与 OptiView 混用</span></div>
-        <div class="datum"><span class="k">Total Call OI</span><span class="v">2,248,587 张</span><span class="k">全部到期日合计 · OptiView 2026-10-21 15:55 ET</span></div>
-        <div class="datum"><span class="k">Total Put OI</span><span class="v">2,391,640 张</span><span class="k">全部到期日合计 · OptiView 2026-10-21 15:55 ET</span></div>
-        <div class="datum"><span class="k">Put / Call OI</span><span class="v">1.06</span><span class="k">Put 略多于 Call · 全部到期日合计 · OptiView 2026-10-21 · 上期 1.05</span></div>
-        <div class="datum"><span class="k">Gamma 墙 · Call / Put</span><span class="v">$160 / $150</span><span class="k">最高 gamma 行权价 · FlashAlpha 2026-10-21；墙位与上期持平；与最大 OI 墙口径不同，不可混用</span></div>
-        <div class="datum"><span class="k">最大 OI 墙 · Call / Put</span><span class="v">$200 / $120</span><span class="k">最大 OI 行权价 · OptiView 2026-10-21；与 Gamma 墙口径不同，不可混用</span></div>
-        <div class="datum"><span class="k">Max Pain（全部到期日）</span><span class="v">$150</span><span class="k">较 2026-10-22 收盘 $144.75 高约 3.6% · OptiView 口径原文 “across all listed expirations”（全部到期日合并口径）· 全部到期日口径与近月口径不可直接比较</span></div>
-        <div class="datum"><span class="k">30 天 ATM IV / IV Rank</span><span class="v">55.3% / 9</span><span class="k">LOW · IV Rank 9/100 · 上期 51.0% · OptiView 2026-10-21</span></div>
-        <div class="datum"><span class="k">期权隐含预期波幅</span><span class="v">±$13.81</span><span class="k">±8.7% · 30 天口径 · OptiView 2026-10-21 · 上期 ±$14.16 / ±9.6%</span></div>
-        <div class="datum"><span class="k">OI 总量 31 日排名</span><span class="v">76 / 100</span><span class="k">OptiView 2026-10-21</span></div>
-        <div class="datum"><span class="k">现价位置</span><span class="v">跌穿地板</span><span class="k">2026-10-22 收盘 $144.75 低于 Call Wall $160 约 9.5%（墙未破）；跌穿 Put Wall $150（较墙低约 3.5%）；墙位为 10/21 快照口径。附注：OptiView 最大 OI 口径 Call $200 / Put $120，两种“墙”定义不同，不可混用</span></div>
-        <div class="datum"><span class="k">成交异动</span><span class="v">$160 / 2.72</span><span class="k">最热行权价 $160（10/21 会话）；全链成交量 / OI 比 2.72，上期 $140 / 0.84</span></div>
+        <div class="datum"><span class="k">净做市商 GEX</span><span class="v neg">−96.7M</span><span class="k">负 Gamma · FlashAlpha Oct 22, 2026 4:45 PM ET · 上期 +160.6M，由正转负</span></div>
+        <div class="datum"><span class="k">FlashAlpha ATM IV</span><span class="v">59.5%</span><span class="k">FlashAlpha Oct 22, 2026 4:45 PM ET · 上期 55.6% · 快照参考价 $145.38 · 与 OptiView 30 天 IV 口径不同，不可直接混用</span></div>
+        <div class="datum"><span class="k">HV20（20 日历史波动率）</span><span class="v">66.4%</span><span class="k">FlashAlpha 2026-10-22 · 上期 56.2% · 口径同上，不可与 OptiView 混用</span></div>
+        <div class="datum"><span class="k">Total Call OI</span><span class="v">2,297,435 张</span><span class="k">全部到期日合计 · OptiView Oct 22, 2026 3:55 PM ET · 上期 2,248,587</span></div>
+        <div class="datum"><span class="k">Total Put OI</span><span class="v">2,412,311 张</span><span class="k">全部到期日合计 · OptiView Oct 22, 2026 3:55 PM ET · 上期 2,391,640</span></div>
+        <div class="datum"><span class="k">Put / Call OI</span><span class="v">1.05</span><span class="k">Put 略多于 Call · 全部到期日合计 · OptiView Oct 22, 2026 · 上期 1.06</span></div>
+        <div class="datum"><span class="k">Gamma 墙 · Call / Put</span><span class="v">$150 / $140</span><span class="k">最高 gamma 行权价 · FlashAlpha 2026-10-22；上期 $160 / $150，两墙各下移 $10；与最大 OI 墙口径不同，不可混用</span></div>
+        <div class="datum"><span class="k">最大 OI 墙 · Call / Put</span><span class="v">$200 / $120</span><span class="k">最大 OI 行权价 · OptiView 2026-10-22；上期同；离现价较远，gamma 即时意义较弱；与 Gamma 墙口径不同，不可混用</span></div>
+        <div class="datum"><span class="k">Max Pain（全部到期日）</span><span class="v">$150</span><span class="k">较 2026-10-23 收盘 $147.49 高约 1.7% · OptiView 口径原文 “across all listed expirations”（全部到期日合并口径）· 全部到期日口径与近月口径不可直接比较</span></div>
+        <div class="datum"><span class="k">30 天 ATM IV / IV Rank</span><span class="v">55.5% / 13</span><span class="k">LOW · IV Rank 13/100 · 上期 55.3% / 9 LOW · OptiView Oct 22, 2026</span></div>
+        <div class="datum"><span class="k">期权隐含预期波幅</span><span class="v">±$22.70</span><span class="k">±15.6% · 30 天口径 · OptiView Oct 22, 2026 · 上期 ±$13.81 / ±8.7%，明显扩大</span></div>
+        <div class="datum"><span class="k">OI 总量 31 日排名</span><span class="v">81 / 100</span><span class="k">OptiView Oct 22, 2026 · 上期 76/100 · 仓位异常拥挤</span></div>
+        <div class="datum"><span class="k">现价位置</span><span class="v">贴近天花板</span><span class="k">2026-10-23 收盘 $147.49 低于 Call Wall $150 约 1.7%（天花板在上方一步之遥、墙未破）；高于 Put Wall $140 约 5.4%（地板在下方、墙未破）；两墙均未被突破；墙位为 10/22 快照口径。附注：OptiView 最大 OI 口径 Call $200 / Put $120，离现价较远，gamma 即时意义较弱</span></div>
+        <div class="datum"><span class="k">成交异动</span><span class="v">$150 / 0.85</span><span class="k">最热行权价 $150（OptiView 10/22 session，该日为 13.1 亿股解禁日的盘中 session）；全链成交量 / OI 比 0.85，上期 $160 / 2.72，活跃度明显回落</span></div>
       </div>
       <article class="card" style="margin-top:12px">
         <h3>期权结构解读</h3>
         <ul class="thesis-list">
-          <li><span class="num">01</span><div><strong>减震垫变厚【已核实事实】</strong><p>白话说，正 Gamma 是“减震器”：做市商涨了卖、跌了买，波动被压缩。净做市商 GEX +160.6M，较上期 +81.2M 翻倍，减震垫变厚。</p></div></li>
-          <li><span class="num">02</span><div><strong>$150 地板已破【模型推断】</strong><p>白话说，Put Wall 是下跌时的“地板”、Call Wall 是上涨时的“天花板”。现价 $144.75 跌穿 $150 地板后，该位置从支撑变为阻力，下方短期失去一个结构性支撑。</p></div></li>
-          <li><span class="num">03</span><div><strong>Max Pain $150 不是目标价【已核实】</strong><p>白话说，Max Pain 是期权到期时最容易被“吸”向的静态均衡位置，不是目标价；本期 $150 为全部到期日口径，较现价高约 3.6%，全部到期日口径与近月口径不可直接比较。</p></div></li>
-          <li><span class="num">04</span><div><strong>大举调仓、波动定价回落【推断，待确认】</strong><p>最热行权价 $160、全链成交量为持仓（OI）的 2.72 倍，说明 10/21 资金在大举调仓而非钉价；结合 IV 从 61% 坍塌至约 55%、IV Rank 9 低位，期权市场在定价“大消息落地、波动回落”。此推断待 10-22 口径数据确认。</p></div></li>
-          <li><span class="num">05</span><div><strong>风险情景：盯 $120 一带</strong><p>10/26 还有约 3.28 亿股解禁档（10/24 周六到期）到来；若 $150 迟迟收不回，下一参考为 OI 口径最大 Put 墙 $120 一带。</p></div></li>
+          <li><span class="num">01</span><div><strong>减震器变加速器 · 波动放大风险上升</strong><p>白话说，正 Gamma 是“减震器”（做市商涨了卖、跌了买，把波动压住）、负 Gamma 是“加速器”（追涨杀跌，把波动放大）。本期净做市商 GEX 从上期 +160.6M 反转到 −96.7M——减震器翻成了加速器；30 天 ATM IV 55.5%、FlashAlpha ATM IV 59.5%、HV20 66.4%，期权隐含波动维持高位，预期波幅扩大到 ±$22.70（±15.6%）。OI 31 日排名 81/100，仓位异常拥挤——这是涨跌两头都可能放大的结构。</p></div></li>
+          <li><span class="num">02</span><div><strong>现价 vs 墙 · 卡在天花板底下</strong><p>白话说，Call Wall 是上涨时的“天花板”、Put Wall 是下跌时的“地板”。收盘 $147.49 距 $150 天花板仅约 1.7%（一步之遥），距 $140 地板约 5.4%，两墙都没破。$150 既是 Gamma 天花板，也是当日最热行权价——资金聚焦在这里。</p></div></li>
+          <li><span class="num">03</span><div><strong>墙破变化 · 负 Gamma 下磁铁变弹簧</strong><p>在正 Gamma 下破墙是磁铁，负 Gamma 下破墙是弹簧——上破 $150，天花板变加速器，追涨盘可能把涨幅放大；下破 $140，地板变加速器，向下加速（更远处最大 OI 口径的 Put 墙在 $120）。这是条件场景，不是价格预测。</p></div></li>
+          <li><span class="num">04</span><div><strong>Max Pain $150 · 到期最容易被吸向的位置，不是目标价</strong><p>白话说，Max Pain 是期权到期时价格最容易被“吸”向的静态均衡位置，不是任何人的目标价；本期 $150（全部到期日口径，全部到期日口径与近月口径不可直接比较），现价 $147.49 在其下方约 1.7%。解禁日大跌后短线偏离这个静态均衡属正常。</p></div></li>
+          <li><span class="num">05</span><div><strong>成交异动 · 解禁日资金押注 $150</strong><p>10/22 解禁日 session 最热行权价是 $150（天花板正下方），全链成交量 / OI 0.85（上期 2.72）——活跃度明显回落，资金观望情绪浓。</p></div></li>
         </ul>
+      
       </article>
-      <div class="source-note" style="margin-top:12px"><strong>分层判断：</strong><strong>已核实事实</strong>是 2026-10-21 快照的 GEX +160.6M（正 Gamma 大幅增强）、Call Wall $160 / Put Wall $150（与上期持平）、Call OI 2,248,587 / Put OI 2,391,640、Put/Call OI 比 1.06、30 天 IV 55.3%、Max Pain $150（全部到期日口径）与成交异动 $160 / 2.72，以及 2026-10-22 收盘 $144.75 已跌穿 $150；<strong>模型推断</strong>是 $150 由支撑转阻力、期权市场定价波动回落（待 10-22 口径确认）；<strong>风险情景</strong>是 10/26 约 3.28 亿股解禁档到来时 $150 仍收不回，下一参考看 $120 一带。</div>
-      <div class="source-note" style="margin-top:12px"><strong>这对持股人意味着什么：</strong>财报利好兑现＋最大解禁档双重压力下，股价选择向下释放；减震器还在，但地板已破。盯紧两个价位：<strong>$150</strong>（收复则情绪修复、失守后变阻力）与 <strong>$160</strong>（收复才算动能回到多头一边）。数据来源 FlashAlpha（2026-10-21 16:45 ET，其快照价 $159.11）与 OptiView（2026-10-21 15:55 ET，OPRA 15 分钟延迟）；本页不展示 Gamma Flip 具体数值。</div>
+      <div class="source-note" style="margin-top:12px"><strong>分层判断：</strong><strong>已核实事实</strong>是 2026-10-22 快照的 GEX −96.7M（负 Gamma，由正转负）、Call Wall $150 / Put Wall $140（各下移 $10）、Call OI 2,297,435 / Put OI 2,412,311、30 天 IV 55.5%（IV Rank 13 LOW）、Max Pain $150（全部到期日口径）与成交异动 $150 / 0.85，以及 2026-10-23 收盘 $147.49 低于 $150 天花板约 1.7%、高于 $140 地板约 5.4%，两墙均未被突破；<strong>模型推断</strong>是 GEX 由正转负 + 墙下移 = 解禁日大跌后空头对冲与保护性买盘重构了 Gamma 结构、波动放大倾向增强，但快照是 10/22 盘后的，10/23 全天的成交结构要等下期快照；<strong>风险场景</strong>是周一（美东 10/26）约 3.28 亿股解禁档首个交易日：在负 Gamma 下若抛压把价格打下 $140 地板，加速向下；若反弹上穿 $150，则进入加速上涨剧本。别追在墙上。</div>
+      <div class="source-note" style="margin-top:12px"><strong>这对持股人意味着什么：</strong>解禁日（10/22）大跌后股价小幅修复到 $147.49，但期权结构告诉我们这不是“减震器回来了”——GEX 由正转负，两头都可能加速；收盘贴在 $150 天花板下方 1.7%，周末一过就是 10/26（周一）约 3.28 亿股解禁的首个交易日，方向选择就在眼前。盯紧两个价位：上方 <strong>$150</strong>（天花板 / 突破线）、下方 <strong>$140</strong>（地板 / 回踩线）。数据来源 FlashAlpha（Oct 22, 2026 4:45 PM ET）与 OptiView（Oct 22, 2026 3:55 PM ET，OPRA 15 分钟延迟）；本页不展示 Gamma Flip 具体数值。</div>
     </section>
 
     <section class="section" id="operations">
@@ -360,7 +361,7 @@
               <tr><td data-label="期间">FY 2025</td><td data-label="营收">$18.67B · +33%</td><td data-label="利润 / 现金流" class="neg">净亏损 −$4.9B</td><td data-label="来源"><a class="cite" href="https://moneywise.com/investing/stocks/spacex-ipo-s1-risk-factors-elon-musk" target="_blank" rel="noreferrer">SOURCE ↗</a></td></tr>
               <tr><td data-label="期间">Q1 2026</td><td data-label="营收">约 $4.7B · +15%</td><td data-label="利润 / 现金流" class="neg">净亏损 −$4.276B</td><td data-label="来源"><a class="cite" href="https://www.fool.com/investing/2026/09/20/should-you-buy-spacex-stock-before-its-next-earnin/" target="_blank" rel="noreferrer">SOURCE ↗</a></td></tr>
               <tr><td data-label="期间">Q2 2026</td><td data-label="营收">$7.81B · +91.9%</td><td data-label="利润 / 现金流">调整后 EPS −$0.09（预期 −$0.26）· 调整后 EBITDA $3.5B</td><td data-label="来源"><a class="cite" href="https://www.financial-news.co.uk/spacex-q2-2026-results-beat-estimates-as-ai-capex-clouds-outlook/" target="_blank" rel="noreferrer">SOURCE ↗</a></td></tr>
-              <tr><td data-label="期间">Q3 2026</td><td data-label="营收">$14.58B · +161%</td><td data-label="利润 / 现金流">GAAP 净利润 $4.4B（上市后首个实质盈利季）· 调整后 EPS $0.35 · 调整后 EBITDA $8.81B（+306%）</td><td data-label="来源"><span class="cite">Q3 财报 · 2026-10-20 盘后 · 多家二级聚合转述，未直接核验 SEC 原文</span></td></tr>
+              <tr><td data-label="期间">Q3 2026</td><td data-label="营收">$14.57–14.58B · +161%</td><td data-label="利润 / 现金流">GAAP 净利润约 $4.4B（上市后首个实质盈利季）· 调整后 EBITDA 约 $8.81B（+306%）· EPS 口径分歧：CapitalSnitch $0.45 vs MarketBeat 附属稿 $0.35，未能核实统一口径（均为财报稿经二级源转述，未能核实原文）</td><td data-label="来源"><span class="cite">Q3 财报 · 2026-10-20 盘后 · 多家二级聚合转述，未直接核验 SEC 原文</span></td></tr>
               <tr><td data-label="期间">H1 2026</td><td data-label="营收">—</td><td data-label="利润 / 现金流">Capex $28.476B · OCF $3.47B</td><td data-label="来源"><a class="cite" href="https://thegridfin.com/spacex-q2-2026-earnings/" target="_blank" rel="noreferrer">SOURCE ↗</a></td></tr>
             </tbody>
           </table>
@@ -380,10 +381,10 @@
         <h3>Q3 2026 财报要点 · 2026-10-20 美东盘后公布</h3>
         <div class="data-grid" style="grid-template-columns:repeat(3,1fr)">
           <div class="datum"><span class="k">营收</span><span class="v">$14.58B</span><span class="k">+161% YoY · 超共识 ~$12.7B（LSEG 共识 $12.87B / FactSet $12.9B）</span></div>
-          <div class="datum"><span class="k">EPS</span><span class="v">$0.35</span><span class="k">超预期（预期 $0.10–0.16）· GAAP 净利润 $4.4B，IPO 后首个盈利季度</span></div>
-          <div class="datum"><span class="k">Q1 2027 收入指引</span><span class="v">$33–37B</span><span class="k">远超共识 $22.17B · 管理层首次给出 2027 年季度指引</span></div>
+          <div class="datum"><span class="k">EPS</span><span class="v">$0.35 / $0.45</span><span class="k">口径分歧：MarketBeat 附属稿 $0.35（vs 共识 $0.10）/ CapitalSnitch $0.45（vs 预期 $0.14），未能核实统一口径 · GAAP 净利润约 $4.4B，IPO 后首个盈利季度</span></div>
+          <div class="datum"><span class="k">Q1 2027 收入指引</span><span class="v">$33–37B</span><span class="k">远超共识 $22.17B · 管理层首次给出 2027 年季度指引 · Barchart 口径 $33–35B，分歧已注记</span></div>
         </div>
-        <p>分部：Super Intelligence（AI）$7.56B（+830% YoY）首次超过 Starlink Connectivity 成为最大分部，分部调整后 EBITDA $5B；Connectivity（Starlink）$5.25B（+69% YoY），订阅 13.6M（+89% YoY）；Space（发射）$1.77B。调整后 EBITDA 合计 $8.81B（+306% YoY）；现金及可售证券 ~$90B；Backlog $63B（截至 9/30）。名义算力 1.7 GW（6 月 1.4 GW、一年前 0.6 GW）；Q3 capex $19.6B（其中 $16.4B 投 SI）；Q4 capex 指引 $35–40B（Bloomberg 经报道）；Q3 共完成 35 次发射（低于内部 41 次目标）。Musk 确认 SpaceX 与 Tesla 均已成立特别委员会（独立董事）讨论可能合并：无条款协议、不保证成交，Tesla 方面需全体股份 50% 投票通过。</p>
+        <p>分部：Super Intelligence（AI）$7.56B（+830% YoY）首次超过 Starlink Connectivity 成为最大分部，分部调整后 EBITDA $5B；Connectivity（Starlink）$5.25B（+69% YoY），订阅 13.6M（+89% YoY）；Space（发射）$1.77B。调整后 EBITDA 合计 $8.81B（+306% YoY）；现金及可售证券 ~$90B；Backlog $63B（截至 9/30）。名义算力 1.7 GW（6 月 1.4 GW、一年前 0.6 GW）；Q3 capex $19.6B（其中 $16.4B 投 SI）；Q4 capex 指引 $35–40B（Bloomberg 经报道）；Q3 共完成 35 次发射（低于内部 41 次目标）。资本强度注记：财报覆盖的二级转述提到一笔定价高于 8% 的债券融资、自由现金流为负（均为二级转述，未能核实原文）。Musk 确认 SpaceX 与 Tesla 均已成立特别委员会（独立董事）讨论可能合并：无条款协议、不保证成交，Tesla 方面需全体股份 50% 投票通过。</p>
         <p><strong style="color:var(--warning)">质量注记（Earnings Whispers）：</strong>营业利润 $2.8B 远低于净利润 $4.4B，大量利润来自营业线以下；Connectivity 约 55% 毛利率含约 3 个百分点的一次性关税退款，管理层指引 Q4 毛利率回落至 Q2 水平；Cursor 收购带来约 3 年 $23B 留任股权激励（Q3 计 $1.2B），SI 分部营业利润仅 $4.31 亿。财报后盘后股价一度 +8%。</p>
       </article>
     </section>
@@ -391,16 +392,16 @@
     <section class="section" id="short">
       <div class="section-head"><h2>做空与借券</h2><span class="section-index">04 / SHORT</span></div>
       <div class="data-grid">
-        <div class="datum"><span class="k">Short interest</span><span class="v">180,996,777 股</span><span class="k">最新已公布结算日 2026-09-30 · ChartExchange 转引 FINRA · 2026-10-23 重新核查</span></div>
+        <div class="datum"><span class="k">Short interest</span><span class="v">180,996,777 股</span><span class="k">最新已公布结算日 2026-09-30 · ChartExchange 转引 FINRA · 2026-10-24 重新核查</span></div>
         <div class="datum"><span class="k">空头变化（半月）</span><span class="v neg">+11.55%</span><span class="k">较 2026-09-15 · 结算日 2026-09-30</span></div>
         <div class="datum"><span class="k">Short % of float</span><span class="v">20.48%</span><span class="k">结算日 2026-09-30 · ChartExchange 流通盘口径</span></div>
         <div class="datum"><span class="k">Days to cover</span><span class="v">1.83 天</span><span class="k">结算日 2026-09-30 · ChartExchange</span></div>
-        <div class="datum"><span class="k">FINRA 每日做空成交占比（T+1 官方）</span><span class="v">61.66%</span><span class="k">2026-10-22 · FINRA CNMS Reg SHO 日报（CNMS consolidated 文件）</span></div>
-        <div class="datum"><span class="k">最近 5 个交易日</span><span class="v" style="font-size:18px">64.67 · 66.14 · 69.30 · 65.23 · 61.66%</span><span class="k">2026-10/16、10/19、10/20、10/21、10/22 · FINRA CNMS 官方每日文件；连续 5 个交易日占比均超 60%；持仓为半月结算口径、成交为每日流量口径，两者不可直接对比</span></div>
-        <div class="datum"><span class="k">借券费率</span><span class="v">≈0.41% / 年</span><span class="k">截至 2026-09-29 · 第三方参考（公开渠道无更新报价，不作为当前展示口径）</span></div>
+        <div class="datum"><span class="k">FINRA 每日做空成交占比（T+1 官方）</span><span class="v">62.95%</span><span class="k">2026-10-23 · FINRA CNMS Reg SHO 官方日报（仅 ShortVolume 分子口径）</span></div>
+        <div class="datum"><span class="k">最近 5 个交易日</span><span class="v" style="font-size:18px">66.14 · 69.30 · 65.23 · 61.66 · 62.95%</span><span class="k">2026-10/19、10/20、10/21、10/22、10/23 · FINRA CNMS 官方每日文件；10/20 的 69.30% 为 5 日最高；连续 6 个交易日（自 10/16 起）占比均超 60%；10/21 做空量 6,859 万股、占比 65.23%，10/22 做空量 4,820 万股、占比回落至 61.66%；持仓为半月结算口径、成交为每日流量口径，两者不可直接对比</span></div>
+        <div class="datum"><span class="k">借券费率</span><span class="v">6.0%</span><span class="k">Catalyst Edge 约 2026-10-23 更新（自动扫描器模型输出）标注借券利率 6.0%、Hard-to-borrow；与 2026-09-29 第三方参考约 0.41%/年口径不同，仅供参考；S3 Partners / fintel 公开渠道无可达报价；ChartExchange 的 SPXCY OTC 借券费页面（4.07%）为代币化/衍生品种，非 NASDAQ:SPCX 本体，不采用</span></div>
         <div class="datum"><span class="k">数据口径</span><span class="v"><span class="tag warn">不可直接对比</span></span><span class="k">持仓为半月结算存量；成交比为每日流量</span></div>
       </div>
-      <div class="source-note" style="margin-top:12px"><strong>口径警示 · 2026-10-23 重新核查：</strong>最新已公布的空头持仓结算日仍为 2026-09-30：180,996,777 股，占流通盘 20.48%，回补 1.83 天，较 9/15 增加 11.55%（ChartExchange 转引 FINRA）。截至 2026-10-23，FINRA 尚未公布 2026-10-15 结算数据（预计 2026-10-27~30 公布）。最近 5 个交易日做空成交占比 64.67%、66.14%、69.30%、65.23%、61.66% 来自 FINRA CNMS consolidated 官方每日文件（T+1），连续 5 日均超 60%；持仓为半月结算口径、成交为每日流量口径，两者不可直接对比。借券费率约 0.41%/年仍为截至 2026-09-29 的第三方参考（公开渠道无更新报价，不作为当前展示口径）。</div>
+      <div class="source-note" style="margin-top:12px"><strong>口径警示 · 2026-10-24 重新核查：</strong>最新已公布的空头持仓结算日仍为 2026-09-30：180,996,777 股，占流通盘 20.48%（占总股本约 1.37%），回补 1.83 天，较 9/15 增加 11.55%（ChartExchange 转引 FINRA）。截至本次更新（2026-10-24），FINRA 尚未公布 10/15 结算数据（预计 10/27–30 公布）。最近 5 个交易日的 66.14%、69.30%、65.23%、61.66%、62.95% 来自 FINRA CNMS Reg SHO 官方日报（T+1，仅 ShortVolume 分子口径）；持仓为半月结算口径，成交为每日流量口径，两者不可直接对比。借券费率：Catalyst Edge（约 2026-10-23 更新，自动扫描器模型输出）标注借券利率 6.0%、Hard-to-borrow；与上期 2026-09-29 第三方参考约 0.41%/年口径不同，仅供参考，S3 Partners / fintel 等公开渠道无可达报价。ChartExchange 上的 SPXCY OTC 借券费页面（4.07%）为代币化/衍生品种，非 NASDAQ:SPCX 本体，不采用。</div>
     </section>
 
     <section class="section" id="valuation">
@@ -459,44 +460,48 @@
     <section class="section" id="events">
       <div class="section-head"><h2>事件雷达</h2><span class="section-index">08 / RADAR</span></div>
       <!-- EVENT-RADAR -->
-      <article class="card">
-        <h3>分析师目标价榜 <span class="tag">基准 · 2026-10-22 收盘 $144.75</span></h3>
-        <p>所有涨跌幅均按 2026-10-22 收盘 $144.75 重算。近 7 天变化（均为 stockanalysis / dailypolitical / stocktwits 等二级聚合源转述、未见原行研报，已标注）：Goldman Sachs Buy $230→$245（10/22）、Bank of America Buy $235→$275（10/22）、Pivotal Buy $230→$260（10/21）、Mizuho Buy $200→$205（10/21）、Clear Street Buy $217→$248（10/21）、TD Cowen Buy $200→$224（10/21）、Susquehanna Neutral $173→$176（10/21）、RBC Buy $225 维持（10/21）；DZ BANK Sell 维持（10/22，无目标价）、Macquarie Buy 维持（10/21，无目标价）仅记评级不记涨幅。共识：MarketBeat $221.44（46 家，截至 2026-10-20，J.P. Morgan $500 尚未反映）。J.P. Morgan $500 为次级聚合源、长期目标口径，已标注。</p>
+            <article class="card">
+        <h3>分析师目标价榜 <span class="tag">基准 · 2026-10-23 收盘 $147.49</span></h3>
+        <p>所有涨跌幅均按 2026-10-23 收盘 $147.49 重算。近 7 天（10/20–10/23）调整：Phillip Securities 10/23 Sell 跳两级→Buy、目标价 $75→$250；J.P. Morgan 10/21 维持 Overweight、目标价 $240→$500（据 thestockobserver 引 Benzinga/CNBC，次级聚合源，待一级来源交叉）；Barclays 10/21 Overweight、目标价 $254→$300；Cantor Fitzgerald 10/20 Overweight、目标价 $246→$345；BofA 10/22 维持 Buy、$235→$275；Wells Fargo 10/22 目标价上调至 $274；GS 10/22 维持 Buy、$230→$245；Pivotal 10/21 维持 Buy、$230→$260；TD Cowen 10/21 Buy、$200→$224；Mizuho 10/21 维持 Buy、$200→$205；RBC 10/21 重申 Outperform $225；Morgan Stanley 10/21 Overweight $300；Needham 10/22 新覆盖 Buy；Evercore 10/16 维持 Outperform、$275；Stifel 财报后重申 Buy $190；Macquarie 10/21 维持 Buy；DZ BANK 10/22 维持 Sell（无目标价）；UBS 口径冲突（TipRanks 10/21 称 Buy $210→$230；thestockobserver 另称重申 Overweight $300，冲突未能核实）。Clear Street、Susquehanna 本轮无新动作（上期维持）。Barron's 共识 10/23：47 家分析师中 36 位 Buy（77%）、1 位 Sell，平均目标价约 $254（财报后上调约 $25）；MarketBeat：3 Strong Buy / 30 Buy / 9 Hold / 4 Sell（Moderate Buy），平均目标价 $244.19。</p>
         <div class="ladder">
-          <div class="ladder-row"><div class="ladder-firm">Raymond James<small>Strong Buy · 离群值</small></div><div class="ladder-track"><span style="width:100%"></span></div><div class="ladder-stat">$800<small>+452.7%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">J.P. Morgan<small>Buy · 次级聚合源、长期目标口径</small></div><div class="ladder-track"><span style="width:62.5%"></span></div><div class="ladder-stat">$500<small>+245.4%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Morgan Stanley<small>Overweight</small></div><div class="ladder-track"><span style="width:37.5%"></span></div><div class="ladder-stat">$300<small>+107.3%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Benchmark<small>Buy</small></div><div class="ladder-track"><span style="width:35%"></span></div><div class="ladder-stat">$280<small>+93.4%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Bank of America<small>Buy · 2026-10-22 由 $235 上调至 $275 · 二级聚合源转述</small></div><div class="ladder-track"><span style="width:34.38%"></span></div><div class="ladder-stat">$275<small>+90.0%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Evercore ISI<small>Outperform</small></div><div class="ladder-track"><span style="width:34.38%"></span></div><div class="ladder-stat">$275<small>+90.0%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Pivotal Research<small>Buy · 2026-10-21 由 $230 上调至 $260 · 二级聚合源转述</small></div><div class="ladder-track"><span style="width:32.5%"></span></div><div class="ladder-stat">$260<small>+79.6%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Barclays<small>Overweight</small></div><div class="ladder-track"><span style="width:31.75%"></span></div><div class="ladder-stat">$254<small>+75.5%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">CLSA<small>Outperform</small></div><div class="ladder-track"><span style="width:31.25%"></span></div><div class="ladder-stat">$250<small>+72.7%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Bernstein<small>Buy</small></div><div class="ladder-track"><span style="width:31%"></span></div><div class="ladder-stat">$248<small>+71.3%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Clear Street<small>Buy · 2026-10-21 由 $217 上调至 $248 · 二级聚合源转述</small></div><div class="ladder-track"><span style="width:31%"></span></div><div class="ladder-stat">$248<small>+71.3%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Goldman Sachs<small>Buy · 2026-10-22 由 $230 上调至 $245 · 二级聚合源转述</small></div><div class="ladder-track"><span style="width:30.63%"></span></div><div class="ladder-stat">$245<small>+69.3%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Deutsche Bank<small>Buy</small></div><div class="ladder-track"><span style="width:29.38%"></span></div><div class="ladder-stat">$235<small>+62.3%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">RBC Capital<small>Buy · 2026-10-21 维持 $225 · 二级聚合源转述</small></div><div class="ladder-track"><span style="width:28.13%"></span></div><div class="ladder-stat">$225<small>+55.4%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Yorkville Ives<small>Buy</small></div><div class="ladder-track"><span style="width:28.13%"></span></div><div class="ladder-stat">$225<small>+55.4%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">TD Cowen<small>Buy · 2026-10-21 由 $200 上调至 $224 · 二级聚合源转述</small></div><div class="ladder-track"><span style="width:28%"></span></div><div class="ladder-stat">$224<small>+54.8%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">分析师共识 · MarketBeat<small>46 家 · 截至 2026-10-20 · JPM $500 尚未反映</small></div><div class="ladder-track"><span style="width:27.68%"></span></div><div class="ladder-stat">$221.44<small>+53.0%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Wells Fargo<small>Buy</small></div><div class="ladder-track"><span style="width:26.5%"></span></div><div class="ladder-stat">$212<small>+46.5%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Mizuho<small>Buy · 2026-10-21 由 $200 上调至 $205 · 二级聚合源转述</small></div><div class="ladder-track"><span style="width:25.63%"></span></div><div class="ladder-stat">$205<small>+41.6%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Stifel Nicolaus<small>Buy</small></div><div class="ladder-track"><span style="width:23.75%"></span></div><div class="ladder-stat">$190<small>+31.3%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Susquehanna<small>Neutral · 2026-10-21 由 $173 上调至 $176 · 二级聚合源转述</small></div><div class="ladder-track"><span style="width:22%"></span></div><div class="ladder-stat">$176<small>+21.6%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Wolfe Research<small>目标价追踪页</small></div><div class="ladder-track"><span style="width:21.88%"></span></div><div class="ladder-stat">$175<small>+20.9%</small></div></div>
-          <div class="ladder-row"><div class="ladder-firm">Moffett Nathanson<small>目标价追踪页</small></div><div class="ladder-track"><span style="width:17.75%"></span></div><div class="ladder-stat">$142<small class="neg">−1.9%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Raymond James<small>Brian Gesuale · Strong Buy · 重申 2026-10-14 · 离群值</small></div><div class="ladder-track"><span style="width:100%"></span></div><div class="ladder-stat">$800<small>+442.5%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">J.P. Morgan<small>Overweight · 2026-10-21 由 $240 上调 · 据 thestockobserver 引 Benzinga/CNBC（次级聚合源，待一级来源交叉）</small></div><div class="ladder-track"><span style="width:62.5%"></span></div><div class="ladder-stat">$500<small>+239.0%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Cantor Fitzgerald<small>Overweight · 2026-10-20 由 $246 上调</small></div><div class="ladder-track"><span style="width:43.13%"></span></div><div class="ladder-stat">$345<small>+133.9%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Morgan Stanley<small>Adam Jonas · Overweight · 2026-10-21</small></div><div class="ladder-track"><span style="width:37.5%"></span></div><div class="ladder-stat">$300<small>+103.4%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Barclays<small>Overweight · 2026-10-21 由 $254 上调</small></div><div class="ladder-track"><span style="width:37.5%"></span></div><div class="ladder-stat">$300<small>+103.4%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Evercore ISI<small>Kutgun Maral · Outperform · 2026-10-16 由 $230 上调</small></div><div class="ladder-track"><span style="width:34.38%"></span></div><div class="ladder-stat">$275<small>+86.5%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Bank of America<small>Ronald Epstein · Buy · 2026-10-22 由 $235 上调</small></div><div class="ladder-track"><span style="width:34.38%"></span></div><div class="ladder-stat">$275<small>+86.5%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Wells Fargo<small>目标价追踪页 · 2026-10-22 上调</small></div><div class="ladder-track"><span style="width:34.25%"></span></div><div class="ladder-stat">$274<small>+85.8%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Pivotal Research<small>Jeffrey Wlodarczak · Buy · 2026-10-21 由 $230 上调</small></div><div class="ladder-track"><span style="width:32.5%"></span></div><div class="ladder-stat">$260<small>+76.3%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Phillip Securities<small>Glenn Thum · Buy · 2026-10-23 由 Sell 跳两级上调 · 目标价 $75→$250</small></div><div class="ladder-track"><span style="width:31.25%"></span></div><div class="ladder-stat">$250<small>+69.5%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">CLSA<small>Outperform · 沿用上期，无新动作</small></div><div class="ladder-track"><span style="width:31.25%"></span></div><div class="ladder-stat">$250<small>+69.5%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Bernstein<small>Buy · 10/19 重申 / 10/12 重申，目标价无变化</small></div><div class="ladder-track"><span style="width:31%"></span></div><div class="ladder-stat">$248<small>+68.2%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Goldman Sachs<small>Buy · Eric Sheridan · 2026-10-22 由 $230 上调</small></div><div class="ladder-track"><span style="width:30.63%"></span></div><div class="ladder-stat">$245<small>+66.1%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">分析师共识 · MarketBeat<small>截至 2026-10-23 · 3 Strong Buy / 30 Buy / 9 Hold / 4 Sell（Moderate Buy）</small></div><div class="ladder-track"><span style="width:30.52%"></span></div><div class="ladder-stat">$244.19<small>+65.6%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Deutsche Bank<small>Buy</small></div><div class="ladder-track"><span style="width:29.38%"></span></div><div class="ladder-stat">$235<small>+59.3%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">UBS<small>Buy · 2026-10-21 由 $210 上调 · 另有重申 Overweight $300 的传闻口径，冲突未能核实</small></div><div class="ladder-track"><span style="width:28.75%"></span></div><div class="ladder-stat">$230<small>+55.9%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">RBC Capital<small>Outperform · Kenneth Herbert · 2026-10-21 重申</small></div><div class="ladder-track"><span style="width:28.13%"></span></div><div class="ladder-stat">$225<small>+52.6%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Yorkville Ives<small>Buy · 新覆盖 2026-10-06</small></div><div class="ladder-track"><span style="width:28.13%"></span></div><div class="ladder-stat">$225<small>+52.6%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">TD Cowen<small>Buy · 2026-10-21 由 $200 上调</small></div><div class="ladder-track"><span style="width:28%"></span></div><div class="ladder-stat">$224<small>+51.9%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Mizuho<small>Brett Linzey · Buy · 2026-10-21 由 $200 上调</small></div><div class="ladder-track"><span style="width:25.63%"></span></div><div class="ladder-stat">$205<small>+39.0%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Stifel Nicolaus<small>Buy · 财报后重申</small></div><div class="ladder-track"><span style="width:23.75%"></span></div><div class="ladder-stat">$190<small>+28.8%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Susquehanna<small>Neutral · Charles Minervino · 2026-10-21 由 $173 上调 · 据上期报告</small></div><div class="ladder-track"><span style="width:22%"></span></div><div class="ladder-stat">$176<small>+19.3%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Wolfe Research<small>目标价追踪页 · 截至 2026-10-19</small></div><div class="ladder-track"><span style="width:21.88%"></span></div><div class="ladder-stat">$175<small>+18.7%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Moffett Nathanson<small>目标价追踪页 · 截至 2026-10-19</small></div><div class="ladder-track"><span style="width:17.75%"></span></div><div class="ladder-stat">$142<small class="neg">−3.7%</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">DZ BANK<small>Markus Leistner · Sell · 2026-10-22 维持</small></div><div class="ladder-track"><span style="width:0%"></span></div><div class="ladder-stat">—<small>无目标价</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Needham<small>Buy · 2026-10-22 新覆盖</small></div><div class="ladder-track"><span style="width:0%"></span></div><div class="ladder-stat">—<small>无目标价</small></div></div>
+          <div class="ladder-row"><div class="ladder-firm">Macquarie<small>Paul Golding · Buy · 2026-10-21 维持</small></div><div class="ladder-track"><span style="width:0%"></span></div><div class="ladder-stat">—<small>无目标价</small></div></div>
         </div>
+        <p>注：共识行 MarketBeat 截至 2026-10-23；Barron's 10/23 口径：47 家分析师 36 Buy（77%）、1 Sell，平均目标价约 $254。</p>
       </article>
       <div class="two-col" style="margin-top:12px">
         <article class="card">
           <h3>即将到来</h3>
-          <article class="event"><div class="event-date">2026-10-24<br><span class="tag">LOCK-UP</span></div><div><h3>股份锁定期到期（批次）</h3><p>约 3.28 亿股（追踪源口径，未在 424B4 原文逐项核对）取得可卖资格；10/24 为周六，首个交易日为 10/26。解禁仅授予出售资格、不等于实际出售。</p></div></article>
+          <article class="event"><div class="event-date">2026-10-24<br>周六<br><span class="tag">LOCK-UP</span></div><div><h3>解禁：约 3.28 亿股可自由交易（首个交易日 10/26 周一）</h3><p>今日（美东 10/24，周六）限制出售期到期的股份约 3.28 亿股（追踪源口径，未在 424B4 原文逐项核对）取得可卖资格，首个交易日为周一 10/26。解禁仅为取得可卖资格，不等于实际卖出。历史口径（TipRanks 二级梳理，规律不一致）：8/06 首档 9.12 亿股当天 +6%；8/20 与 9/09 各 3.19 亿股分别 −4%、−3.9%；9/10 小档 5900 万股 +0.4%；9/24 档 3.28 亿股 −0.2%；10/09 档约 3.28 亿股 +1%。JPMorgan 估计挂钩该股的指数买盘约 $155 亿（二级转述）；此次档计入 11/30 基准日、影响 12/21 NASDAQ-100 再平衡（TipRanks）。来源：TipRanks / Kalkine.ca / KuCoin 2026-10-23。</p></div></article>
           <article class="event"><div class="event-date">2026-10-27–28<br><span class="tag">FOMC</span></div><div><h3>美联储 FOMC 会议</h3><p>10/27–28 召开 FOMC 会议并公布利率决议；宏观利率路径影响高估值成长股定价，属市场层面事件，非公司事件。</p></div></article>
- <article class="event"><div class="event-date">NET 11/8 起<br>11 月中下旬<br><span class="tag">FLIGHT 15</span></div><div><h3>Starship Flight 15</h3><p>SpaceX 尚未官宣日期。Musk 在 10/20 Q3 财报电话会上称目标约“4–6 周”（即 11 月）；FAA 空域规划幻灯片（NASASpaceflight 2026-10-08 引述，非官方）暂定 NET 11/8；目标：首次以机械臂回收上面级（Ship）。FAA 许可尚未正式颁发。FAA Starbase 年发射量由 25 次增至 100 次的 EIS 审查进行中，公众意见截至 11/30。日期均为暂定口径。</p></div></article>
-          <article class="event"><div class="event-date">最早 2026-10-30<br><span class="tag">STARSHIP FL</span></div><div><h3>Starship 佛州首飞（肯尼迪 39A，Starlink 30-1）</h3><p>最早 10/30，FAA 许可待定；发射后将尝试用塔架筷子臂回收 Super Heavy。来源：floridatoday（2026-10-22）。</p></div></article>
-          <article class="event"><div class="event-date">日期待定<br><span class="tag">STARLINK 15-15</span></div><div><h3>Starlink 15-15 补飞</h3><p>10/22 因加州天气 scrub 后补飞日期待定，无法核实具体日期。</p></div></article>
-          <article class="event"><div class="event-date">无时间表<br><span class="tag">MERGER</span></div><div><h3>Tesla–SpaceX 合并特别委员会评估进展</h3><p>两公司董事会均设特别委员会评估合并，需 Tesla 股东 50% 以上批准；目前无时间表，留意后续表态。</p></div></article>
+ <article class="event"><div class="event-date">NET 11/8 起<br><span class="tag">FLIGHT 15 / 16</span></div><div><h3>Starship Flight 15（NET 11/8）与肯尼迪 39A 首飞（NET 12/10）</h3><p>SpaceX 尚未官宣任何日期。Musk 在 10/20 Q3 财报电话会上称目标约“4–6 周”（即 11 月）；FAA CADENA 空域规划幻灯片（NASASpaceflight 2026-10-08 引述，非官方口径）暂定 Flight 15（Starbase 二号发射台）NET 11/8、Flight 16（肯尼迪 39A，“Starlink 30-1”）NET 12/10，此前的 10/19、10/30 为更早版本规划，已顺延。FAA 已批准 39A 每年最多 44 次 Starship 发射（88 次回收），但 39A 的 Starship 发射许可尚未正式颁发（~9/27 口径）。10/21 新信息：SpaceX 发射副总裁 Kiko Dontchev 在 Cocoa Village 活动上表示，39A 首飞后飞船将不返回太空海岸，而是在轨约 8–9 小时、绕地球约 6 圈并部署载荷后，直接飞往德州 Starbase 着陆（“Florida to Starbase”）；助推器计划在 39A 塔架“筷子”机械臂捕获（Florida Today 10/22）。背景：Flight 14（9/28）为 Starship 首次完整入轨并首次部署 26 颗 Starlink 三代卫星。</p></div></article>
+          <article class="event"><div class="event-date">进行中<br><span class="tag">BUSINESS</span></div><div><h3>80,000 座美国信号塔谈判（谋求第四家全国性无线运营商）</h3><p>SpaceX 正谈判接入至少 8 万座美国蜂窝基站，谋求成为第四家全国性无线运营商；AT&amp;T、Verizon、T-Mobile 承压，Crown Castle 等塔商受益。发展中，无明确时间表。来源：TipRanks / Fool 2026-10-23。</p></div></article>
+          <article class="event"><div class="event-date">进行中<br><span class="tag">MERGER</span></div><div><h3>Tesla / SPCX 潜在合并（董事会特别委员会评估中）</h3><p>TSLA 与 SPCX 董事会均已成立特别委员会评估潜在合并；SpaceX 文件披露任何与 Tesla 的潜在合并须经控股股东 Musk 批准；Musk 称合并是“好主意”，但股东投票、估值、监管、Tesla 中国业务均为障碍（defenseworld 二级摘要）。KuCoin flash 称 Musk 在探索潜在 $3.7 万亿合并——二级转述、传闻口径，未能核实。10/23 补充：Tesla Q3 财报披露对 SpaceX 持仓计提 $1.42 亿未实现亏损，前 9 个月未实现收益 $8.63 亿（Stocktwits 转述财报）。</p></div></article>
           <article class="event"><div class="event-date">2026-10-22 披露<br><span class="tag">GOOGLE GPU</span></div><div><h3>Google GPU 采购协议细节</h3><p>Google 同意 2026-10 至 2029-6 每月 $920M 向 SpaceX 采购约 110,000 颗 Nvidia GPU；Motley Fool 提示集中度风险。协议执行与后续披露待跟踪。</p></div></article>
                    <article class="event"><div class="event-date">2026-Q4<br><span class="tag">SUNCATCHER</span></div><div><h3>Project Suncatcher 轨道 AI 测试结果</h3><p>Transporter-18 搭载的 Google TPU 轨道 AI 计算测试将公布初步结果；与 Google 的 $920M/月协议已于 10 月开始执行。</p></div></article>
           <article class="event"><div class="event-date">2026-12-03<br><span class="tag">TESLA AGM</span></div><div><h3>Tesla 年度股东大会</h3><p>Barclays 猜测 SpaceX–Tesla 合并可能在此前宣布——属分析师猜测，未获任何一方确认，明确标注为猜测口径。</p></div></article>
@@ -505,12 +510,15 @@
         </article>
         <article class="card">
           <h3>近期已发生</h3>
-          <article class="event"><div class="event-date">2026-10-22<br><span class="tag">LOCK-UP / PRICE</span></div><div><h3>最大解禁档落地，SPCX 收跌 9.14% 至 $144.75</h3><p>约 13 亿股解禁（追踪源口径，未在 424B4 原文逐项核对），为上市以来最大单档；解禁仅授予出售资格、不等于实际出售，实际内部人抛售量无法核实。当日 SPCX 收盘 −9.14% 至 $144.75，Motley Fool 定性为财报后获利了结＋解禁双重因素。历史 6 次解禁当日反应不一（8/6 +6% / 8/20 −4% / 9/9 −3.9% / 9/10 +0.4% / 9/24 −0.2% / 10/9 +1%）；JPMorgan 估算指数挂钩买盘约 $15.5B（7 月纳入 NASDAQ-100）为结构性承接线索。</p></div></article>
-          <article class="event"><div class="event-date">2026-10-22<br><span class="tag">STARLINK 15-15</span></div><div><h3>Starlink 15-15 因加州天气 scrub</h3><p>原定范登堡 SLC-4E 发射因加州天气 scrub；补飞日期无法核实。运营层事件，不当作股价催化。</p></div></article>
+          <article class="event"><div class="event-date">2026-10-23<br><span class="tag">STARLINK 15-15</span></div><div><h3>Starlink 15-15 第四次尝试发射成功</h3><p>Falcon 9 于美东 10/23 18:48（北京 10/24 06:48）自范登堡 SLC-4E 升空，27 颗 Starlink 卫星入轨；助推器 B1063 第 36 次飞行，约 8.5 分钟后在太平洋无人船成功回收——SpaceX 第 673 次助推器回收。运营层事件，不当作股价催化。来源：Spaceflight Now 10/23、Behind The Black。</p></div></article>
+          <article class="event"><div class="event-date">2026-10-23<br><span class="tag">PRICE</span></div><div><h3>SPCX 收报 $147.49（+1.89%），解禁日大跌后小幅修复</h3><p>SPCX 于 2026-10-23 收报 $147.49，+$2.74（+1.89%）；开盘 $147.93、最高 $149.75、最低 $144.085；成交量约 109.4–109.5M（Fool / MarketBeat 附属稿；spcx-trader 报 101.6M，口径分歧）；盘后（美东 16:36 EDT）$147.72（+0.16%）。较 10/22 解禁日低点 $144.75 回升，但仍低于 10/21 收盘 $159.31。Barron's（10/23）：周四下跌与 Meta Q3 财报引发的“AI 资本开支融资担忧”有关；周五开盘前本周累计约 −1%。Jim Cramer 在做“lockup watch”跟踪（二级转述）。价格截至 2026-10-23 收盘（Fool / Finnhub / stockanalysis / spcx-trader 交叉核对）。</p></div></article>
+          <article class="event"><div class="event-date">2026-10-23<br><span class="tag">ANALYST</span></div><div><h3>财报后评级/目标价上调潮（10/20–10/23）</h3><p>Phillip Securities 10/23 Sell 跳两级→Buy、目标价 $75→$250（理由：AI 算力需求超供给、云合同涨价续签）；GS 10/22 维持 Buy、$230→$245；BofA 10/22 维持 Buy、$235→$275；JPM 10/21 维持 Overweight、$240→$500；Barclays 10/21 Overweight、$254→$300；Cantor Fitzgerald 10/20 Overweight、$246→$345；Pivotal 10/21 维持 Buy、$230→$260；TD Cowen 10/21 Buy、$200→$224；Mizuho 10/21 维持 Buy、$200→$205；Wells Fargo 10/22 目标价上调至 $274；RBC 10/21 重申 Outperform $225；Morgan Stanley 10/21 Overweight $300；Needham 10/22 新覆盖 Buy；Evercore 10/16 维持 Outperform $275；Macquarie 10/21 维持 Buy；DZ BANK 10/22 维持 Sell；UBS 口径冲突未能核实。明细与涨幅基准见分析师榜（基准 2026-10-23 收盘 $147.49）。</p></div></article>
+          <article class="event"><div class="event-date">2026-10-22<br><span class="tag">LOCK-UP</span></div><div><h3>约 13.1 亿股最大解禁档落地，收跌 −9.14%</h3><p>约 13.1 亿股（主受限池约 28%、占总股本约 9.7%）转为可出售，当日 SPCX 收 −9.14% 至 $144.75（多源：TipRanks / Kalkine / KuCoin / themarketperiodical）。归因限定：TipRanks 指出当天科技股普跌，无法把跌幅全部归因于解禁供给；Barron's 称 Meta Q3 财报引发的“AI 资本开支融资担忧”亦有关联。当日内部人实际抛售量未能核实（唯一有公开记录的是此前总裁 Gwynne Shotwell 抛售的 34.2 万股）。解禁仅为取得可卖资格，不等于实际卖出。</p></div></article>
+          <article class="event"><div class="event-date">2026-10-22<br><span class="tag">STARLINK 15-15</span></div><div><h3>Starlink 15-15 第三次尝试：倒数最后几秒因天气 scrub</h3><p>原定范登堡 SLC-4E 发射在倒数最后几秒因天气 hold 后 scrub；这是该任务第三次尝试未果（10/20 技术原因取消、10/21 天气取消），第四次尝试于 10/23 成功（见上方条目）。运营层事件，不当作股价催化。</p></div></article>
           <article class="event"><div class="event-date">2026-10-21<br>美东盘后<br><span class="tag">TESLA CALL</span></div><div><h3>Tesla Q3 财报电话会：营收与 EPS 双超预期</h3><p>营收 $28.05B（预期 $27.9B）、EPS $0.48（预期 $0.43）双超预期；Musk 拒绝补充合并细节（“tap dancing through a minefield”）；两公司董事会均设特别委员会评估合并，需 Tesla 股东 50% 以上批准；未核实到 Starlink 直接提及。</p></div></article>
           <article class="event"><div class="event-date">2026-10-21<br><span class="tag">PRICE / ANALYST</span></div><div><h3>SPCX 收报 $159.31（+7.79%），财报后首个交易日高开消化</h3><p>SPCX 于 2026-10-21 收报 $159.31，上涨 $11.52（+7.79%）；高开 $160.555（+8.6%）、盘中最高 $166.18 后回落，最低 $156.93，成交约 1.996 亿股显著放量。收盘涨幅落在事件前概率卡预估区间 $155–166 内。同日 J.P. Morgan 维持 Buy、目标价由 $225 大幅上调至 $500（据 StockMarketLoop 报道，为次级聚合源，待 Bloomberg/路透交叉）。Stocktwits 散户情绪由看空转看多。价格截至 2026-10-21 收盘（Finnhub / techi / capitalsnitch 交叉核对）。</p></div></article>
           <article class="event"><div class="event-date">2026-10-21<br><span class="tag">BUSINESS</span></div><div><h3>财报后新信息：Google GPU 供应协议、Musk ARR 预期、Q4 capex 指引</h3><p>① SpaceX 与 Google 签署 GPU 供应协议：11 万颗 Nvidia GPU 及配套设备，2026-10 至 2029-06 每月 $9.2 亿付款义务（2026-12-31 后可终止）。来源：tradingview.com 新闻摘要（2026-10-21）。② Musk 在财报电话会上给出个人预期：2027 年末 ARR $500B–$1T（其个人预期，非公司财务预测）。来源：zacks.com（2026-10-20/21）。③ Q4 资本开支指引 $35–40B（在符合预期的 $19.6B Q3 capex 之后）。来源：Bloomberg 经报道（2026-10-21）。④ Starlink 航空业务：已签约约 12,000 架飞机（约占全球商用机队四分之一），已装机 3,800+ 架。来源：teslanorth.com（财报电话会内容，2026-10-20）。⑤ Q3 共完成 35 次发射（低于内部 41 次目标）。来源：financier.news（2026-10-21）。</p></div></article>
-          <article class="event"><div class="event-date">2026-10-20<br><span class="tag">STARLINK 15-15</span></div><div><h3>Starlink 15-15 发射成功</h3><p>Falcon 9 于美东 10/20 晚从范登堡 SLC-4E 升空，27 颗 Starlink 卫星入轨，助推器在太平洋无人船回收成功。运营层事件，不当作股价催化。来源：spacelaunchschedule / vcstar（2026-10-19/21）。</p></div></article>
+          <article class="event"><div class="event-date">2026-10-20<br><span class="tag">STARLINK 15-15</span></div><div><h3>Starlink 15-15 首次尝试因技术原因取消（时间线修正）</h3><p>按最新核实修正时间线：10/20 首次尝试因技术原因取消；10/21 因天气取消（加注前叫停）；10/22 倒数最后几秒因天气 hold 后 scrub；第四次尝试于 10/23 发射成功（见顶部条目）。此前本页“10/20 发射成功”表述有误，现予更正。运营层事件，不当作股价催化。</p></div></article>
           <article class="event"><div class="event-date">2026-10-20<br>美东盘后<br><span class="tag">Q3 EARNINGS</span></div><div><h3>Q3 2026 财报大超预期：营收 $14.575B、净利润 $4.4B，盘后一度 +8%</h3><p>营收 $14.575B（+161% YoY，大超预期）、EPS $0.35（超预期）、GAAP 净利润 $4.4B（IPO 后首个盈利季度）、调整后 EBITDA $8.8B（利润率约 60%）；Q1 2027 收入指引 $33–37B，远超共识 $22.17B；Super Intelligence 业务 $7.56B（+830% YoY）成为第一大业务。Musk 确认 SpaceX 与 Tesla 均已成立特别委员会讨论可能合并（无条款协议、不保证成交）。质量注记（Earnings Whispers）：营业利润 $2.8B 远低于净利润 $4.4B；Connectivity 毛利率含约 3 个百分点一次性关税退款（Q4 指引回落）；Cursor 约 $23B 留任股权激励压制 SI 分部利润。财报后盘后股价一度 +8%。</p></div></article>
           <article class="event"><div class="event-date">2026-10-20<br><span class="tag">PRICE</span></div><div><h3>SPCX 收报 $147.79（−0.11%），财报前窄幅震荡</h3><p>SPCX 于 2026-10-20 收跌 $0.17（−0.11%）至 $147.79；开盘 $146.16、最高 $148.66、日内低 $143.27，成交 99,549,776 股。价格截至 2026-10-20 收盘（Yahoo Finance 口径）。</p></div></article>
           <article class="event"><div class="event-date">2026-10-19<br><span class="tag">PRICE / MUSK</span></div><div><h3>SPCX 收涨 1.32% 至 $147.96，终结四连跌；Musk 赠股帖文同日发布</h3><p>SPCX 收报 $147.96，上涨 $1.93（+1.32%），结束四连跌；盘中最高 $151.01、最低 $146.84。Musk 于 10/19 凌晨在 X 发帖称明年将给每个美国孩子送 1 股 SPCX（“the first of many”）；细节更新：赠股为其个人持有的 SPCX，覆盖约 72–73M 儿童，按 $146.03 计约 $10.5–10.7B，可能经由 Trump Accounts 分发，SpaceX 官方未表态；背景为 Anthropic 10/18 宣布以 5% 股份设立公益基金；Shotwell 夫妇 7 月曾宣布向 Trump Accounts 捐股给 200 万+ 儿童（11–17 岁）。媒体未将当日涨跌归因于单一因素——帖文与涨跌为时间相关，因果未核实。价格截至 2026-10-19 收盘（Yahoo Finance 口径）。</p></div></article>
@@ -560,14 +568,14 @@
       </div>
     </section>
 
-    <section class="source-note"><strong>研究完整性 · 截至 2026-10-23：</strong>收盘为 2026-10-22 $144.75。截至 2026 年 IPO 披露，融资额存在 $75B 基础发行与约 $85.7B 含超额配售两种口径（来源待核实）；截至 2026 年 S-1 / 13G 披露，Musk 经济权益存在约 36% 与 48.4% 两种口径（来源待核实）。财务为 Q3 2026 口径（2026-10-20 美东盘后公布，未直接核验 SEC 原文，来源为多家二级聚合转述）。借券费率约 0.41%/年仍为截至 2026-09-29 的第三方参考（公开渠道无更新报价）。期权结构数据截至 2026-10-21 快照（OptiView Oct 21, 2026 3:55 PM ET、FlashAlpha Oct 21, 2026 4:45 PM ET，距 2026-10-22 收盘差 1 个交易日，OCC T+1 滞后、OPRA 15 分钟延迟）；净 GEX +160.6M，方向为正 Gamma。本页不展示 Gamma Flip 具体数值。</section>
+    <section class="source-note"><strong>研究完整性 · 截至 2026-10-23：</strong>截至 2026 年 IPO 披露，融资额存在 $75B 基础发行与约 $85.7B 含超额配售两种口径（来源待核实）；截至 2026 年 S-1 / 13G 披露，Musk 经济权益存在约 36% 与 48.4% 两种口径（来源待核实）。财务为 Q3 2026 口径（2026-10-20 美东盘后公布；营收 $14.57–14.58B 同比 +161%、净利润约 $44 亿、调整后 EBITDA 约 $88 亿，均为财报稿经二级源转述，未能核实原文；EPS 口径分歧：$0.45 vs $0.35）。借券费率：Catalyst Edge 约 2026-10-23 标注借券利率 6.0%（自动扫描器模型输出，非 S3/fintel 口径，仅供参考）；2026-09-29 第三方参考约 0.41%/年为不同口径；S3 Partners / fintel 公开渠道无可达报价。期权结构数据截至 2026-10-22 快照（OptiView Oct 22, 2026 3:55 PM ET、FlashAlpha Oct 22, 2026 4:45 PM ET，参考价 $145.12/$145.38；距 10/23 收盘差 1 个交易日，OCC T+1 滞后、OPRA 15 分钟延迟）；净 GEX −96.7M，方向为负 Gamma。本页不展示 Gamma Flip 具体数值。FINRA 10/15 结算数据截至本次更新尚未公布（预计 10/27~30）。10/24 解禁约 3.28 亿股为追踪源口径（未在 424B4 原文逐项核对）；10/22 解禁档内部人实际抛售量未能核实。Starlink 15-16 发射结果未能核实。Starship 39A 首飞与 Flight 15 日期为非官方规划口径，SpaceX 官方未公布。</section>
 
-    <footer>本页是截至 2026-10-22 美股收盘的静态研究快照；股价卡保留「刷新实时行情」按钮及开盘时段自动刷新，其余数据按固定计划更新；不构成证券研究报告或投资建议。引用链接打开第三方原始页面。</footer>
+    <footer>本页是截至 2026-10-23 美股收盘的静态研究快照；股价卡保留「刷新实时行情」按钮及开盘时段自动刷新，其余数据按固定计划更新；不构成证券研究报告或投资建议。引用链接打开第三方原始页面。</footer>
   </main>
 
   <script>
     (function () {
-      var data = [['2026-06-15',192.50],['2026-06-16',201.80],['2026-06-17',191.82],['2026-06-18',185.00],['2026-06-22',154.60],['2026-06-23',156.11],['2026-06-24',154.54],['2026-06-25',153.00],['2026-06-26',153.23],['2026-06-29',164.19],['2026-06-30',170.86],['2026-07-01',157.54],['2026-07-02',162.00],['2026-07-06',160.42],['2026-07-07',149.47],['2026-07-08',148.30],['2026-07-09',152.16],['2026-07-10',145.30],['2026-07-13',139.14],['2026-07-14',136.08],['2026-07-15',135.27],['2026-07-16',131.11],['2026-07-17',123.99],['2026-07-20',119.85],['2026-07-21',123.54],['2026-07-22',115.26],['2026-07-23',118.24],['2026-07-24',115.07],['2026-07-27',113.50],['2026-07-28',116.41],['2026-07-29',112.55],['2026-07-30',112.20],['2026-07-31',108.37],['2026-08-03',114.53],['2026-08-04',125.33],['2026-08-05',108.27],['2026-08-06',114.92],['2026-08-07',133.11],['2026-08-10',138.74],['2026-08-11',133.29],['2026-08-12',146.15],['2026-08-13',141.29],['2026-08-14',140.00],['2026-08-17',146.23],['2026-08-18',143.34],['2026-08-19',139.65],['2026-08-20',134.00],['2026-08-21',136.97],['2026-08-24',135.00],['2026-08-25',137.95],['2026-08-26',139.63],['2026-08-27',140.87],['2026-08-28',141.50],['2026-08-31',143.69],['2026-09-01',142.23],['2026-09-02',140.71],['2026-09-03',149.74],['2026-09-04',147.95],['2026-09-08',153.47],['2026-09-09',147.55],['2026-09-10',148.18],['2026-09-11',151.21],['2026-09-14',148.15],['2026-09-15',143.49],['2026-09-16',150.88],['2026-09-17',154.81],['2026-09-18',152.71],['2026-09-21',151.85],['2026-09-22',154.72],['2026-09-23',148.36],['2026-09-24',148.03],['2026-09-25',148.68],['2026-09-28',145.47],['2026-09-29',149.24],['2026-09-30',150.86],['2026-10-01',148.07],['2026-10-02',158.96],['2026-10-05',171.09],['2026-10-06',171.92],['2026-10-07',167.60],['2026-10-08',160.57],['2026-10-09',162.57],['2026-10-12',163.42],['2026-10-13',156.54],['2026-10-14',152.16],['2026-10-15',148.62],['2026-10-16',146.03],['2026-10-19',147.96],['2026-10-20',147.79],['2026-10-21',159.31],['2026-10-22',144.75]];
+      var data = [['2026-06-15',192.50],['2026-06-16',201.80],['2026-06-17',191.82],['2026-06-18',185.00],['2026-06-22',154.60],['2026-06-23',156.11],['2026-06-24',154.54],['2026-06-25',153.00],['2026-06-26',153.23],['2026-06-29',164.19],['2026-06-30',170.86],['2026-07-01',157.54],['2026-07-02',162.00],['2026-07-06',160.42],['2026-07-07',149.47],['2026-07-08',148.30],['2026-07-09',152.16],['2026-07-10',145.30],['2026-07-13',139.14],['2026-07-14',136.08],['2026-07-15',135.27],['2026-07-16',131.11],['2026-07-17',123.99],['2026-07-20',119.85],['2026-07-21',123.54],['2026-07-22',115.26],['2026-07-23',118.24],['2026-07-24',115.07],['2026-07-27',113.50],['2026-07-28',116.41],['2026-07-29',112.55],['2026-07-30',112.20],['2026-07-31',108.37],['2026-08-03',114.53],['2026-08-04',125.33],['2026-08-05',108.27],['2026-08-06',114.92],['2026-08-07',133.11],['2026-08-10',138.74],['2026-08-11',133.29],['2026-08-12',146.15],['2026-08-13',141.29],['2026-08-14',140.00],['2026-08-17',146.23],['2026-08-18',143.34],['2026-08-19',139.65],['2026-08-20',134.00],['2026-08-21',136.97],['2026-08-24',135.00],['2026-08-25',137.95],['2026-08-26',139.63],['2026-08-27',140.87],['2026-08-28',141.50],['2026-08-31',143.69],['2026-09-01',142.23],['2026-09-02',140.71],['2026-09-03',149.74],['2026-09-04',147.95],['2026-09-08',153.47],['2026-09-09',147.55],['2026-09-10',148.18],['2026-09-11',151.21],['2026-09-14',148.15],['2026-09-15',143.49],['2026-09-16',150.88],['2026-09-17',154.81],['2026-09-18',152.71],['2026-09-21',151.85],['2026-09-22',154.72],['2026-09-23',148.36],['2026-09-24',148.03],['2026-09-25',148.68],['2026-09-28',145.47],['2026-09-29',149.24],['2026-09-30',150.86],['2026-10-01',148.07],['2026-10-02',158.96],['2026-10-05',171.09],['2026-10-06',171.92],['2026-10-07',167.60],['2026-10-08',160.57],['2026-10-09',162.57],['2026-10-12',163.42],['2026-10-13',156.54],['2026-10-14',152.16],['2026-10-15',148.62],['2026-10-16',146.03],['2026-10-19',147.96],['2026-10-20',147.79],['2026-10-21',159.31],['2026-10-22',144.75],['2026-10-23',147.49]];
       var svg = document.getElementById('priceChart');
       var readout = document.getElementById('chartReadout');
       var buttons = document.querySelectorAll('[data-range]');
@@ -758,7 +766,7 @@
       }
 
       function renderFailure() {
-        statusEl.textContent = '实时行情获取失败，显示 2026-10-22 收盘价';
+        statusEl.textContent = '实时行情获取失败，显示 2026-10-23 收盘价';
       }
 
       function refreshQuote(silent) {
